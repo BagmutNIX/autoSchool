@@ -6,6 +6,7 @@ public class Main {
         //ReferenceTypesAndString.showSymbol();
         //ReferenceTypesAndString.changeSubstr();
         //ReferenceTypesAndString.longestWord();
+        //Arrays.example();
         Arrays.example();
 
     }
