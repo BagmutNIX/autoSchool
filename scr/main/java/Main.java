@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //Rounding round = new Rounding();
         //Rounding.roundNum();
         //NumberOfDigits.countDigits();
@@ -7,7 +9,11 @@ public class Main {
         //ReferenceTypesAndString.changeSubstr();
         //ReferenceTypesAndString.longestWord();
         //Arrays.example();
-        Arrays.example();
+        //Arrays.example2();
+        //Arrays.maxNumInArray(Arrays.initializeArray());
+        //Arrays.maxNumInArrayList(Arrays.initializeArrayList());
+        Arrays.descArrayOrder();
+
 
     }
 }
