@@ -12,7 +12,10 @@ public class Main {
         //Arrays.example2();
         //Arrays.maxNumInArray(Arrays.initializeArray());
         //Arrays.maxNumInArrayList(Arrays.initializeArrayList());
-        Arrays.descArrayOrder();
+        //Arrays.descArrayOrder();
+        //Arrays.measureQuantityOfSymbols();
+        //Arrays.viceVersa();
+        Arrays.divideArray();
 
 
     }

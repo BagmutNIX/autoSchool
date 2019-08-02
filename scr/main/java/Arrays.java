@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -34,6 +35,7 @@ public class Arrays {
         }
         return numbers;
     }
+
     public static int maxNumInArray(int[] array) throws IOException {
 
         int maximum = 0;
@@ -63,11 +65,12 @@ public class Arrays {
         }
         return numbers;
     }
+
     public static int maxNumInArrayList(ArrayList<Integer> array) throws IOException {
 
         int maximum = 0;
         for (int i = 0; i < array.size(); i++) {
-            if(maximum < array.get(i)) maximum = array.get(i);
+            if (maximum < array.get(i)) maximum = array.get(i);
         }
         System.out.println("Maximum is: " + maximum);
         return maximum;
@@ -80,17 +83,89 @@ public class Arrays {
 2. Ввести с клавиатуры 8 строчек и сохранить их в массив.
 3. Вывести содержимое всего массива (10 элементов) на экран в обратном порядке. Каждый элемент - с новой строки.*/
 
-    public static void descArrayOrder(String[] args) throws IOException {
-      /*  Reader r = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(r);*/
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] array = new String[10];
-        System.out.println("Fill up 8 raws: ");
+    public static void descArrayOrder() throws IOException {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        System.out.println("Enter words: ");
+        java.lang.String[] words = new java.lang.String[10];
         for (int i = 0; i < 8; i++) {
-            array[i] = reader.readLine();
+            java.lang.String s = reader.readLine();
+            words[i] = s;
         }
-        //for (int i = 0; i < 8; i++) array[i] = reader.readLine();
-        System.out.println(array);
+        for (int i = 9; i >= 0; i--) {
+            System.out.println(words[i]);
+        }
+    }
+/*    -3-
+2 массива
+1. Создать массив на 10 строк.
+2. Создать массив на 10 чисел.
+3. Ввести с клавиатуры 10 строк, заполнить ими массив строк.
+4. В каждую ячейку массива чисел записать длину строки из массива строк, индекс/номер ячейки которой совпадает с текущим индексом из массива чисел.
+5. Вывести содержимое массива чисел на экран, каждое значение выводить с новой строки.*/
+
+    public static void measureQuantityOfSymbols() throws IOException {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        java.lang.String[] words = new java.lang.String[10];
+        int[] numbers = new int[10];
+        System.out.println("Enter strings: ");
+        for (int i = 0; i < words.length; i++) {
+            java.lang.String s = reader.readLine();
+            words[i] = s;
+        }
+        for (int i = 0; i < words.length; i++) {
+            int t = words[i].length();
+            System.out.println(t);
+        }
     }
 
+    /*-4-
+            Массив из чисел в обратном порядке
+1. Создать массив на 10 чисел.
+2. Ввести с клавиатуры 10 чисел и записать их в массив.
+3. Расположить элементы массива в обратном порядке.
+4. Вывести результат на экран, каждое значение выводить с новой строки.    */
+    public static int[] viceVersa() throws IOException {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        int[] bingo = new int[10];
+        System.out.println("Please fill up the array: ");
+        for (int i = 0; i < bingo.length; i++) {
+            bingo[i] = Integer.parseInt(reader.readLine());
+        }
+        for (int i = 9; i >= 0; i--) {
+            System.out.println(bingo[i]);
+        }
+
+        return bingo;
+
+    }
+
+/*-5-
+         Один большой массив и два маленьких
+1. Создать массив на 20 чисел.
+2. Ввести в него значения с клавиатуры.
+3. Создать два массива на 10 чисел каждый.
+4. Скопировать большой массив в два маленьких: половину чисел в первый маленький, вторую половину во второй маленький.
+5. Вывести второй маленький массив на экран, каждое значение выводить с новой строки.*/
+
+    public static void divideArray() throws IOException {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        int[] big = new int[20];
+        int[] smallOne = new int[10];
+        //
+        int[] smallTwo = new int[10];
+        System.out.println("Fill up big array: ");
+        for (int i = 0; i < big.length; i++) {
+            big[i] = Integer.parseInt(reader.readLine());
+        }
+        System.arraycopy(big, 0, smallOne, 0, 10);
+        System.arraycopy(big, 10, smallTwo, 0, 10);
+        for (int i = 0; i < smallTwo.length; i++) {
+            System.out.println(smallTwo[i]);
+        }
+    }
 }
+
