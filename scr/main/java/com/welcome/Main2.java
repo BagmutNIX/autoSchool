@@ -1,9 +1,6 @@
 package com.welcome;
 
-import com.welcome.Hello;
-
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main2 {
     public static void main(String[] args) throws IOException {
@@ -15,7 +12,11 @@ public class Main2 {
         //Hello you = new Hello();
         //Hello.printHelloName();
 
-        Conditions_Cycles.minimum();
+        //Conditions_Cycles.minimum();
+        //Conditions_Cycles.minimumFromFourth();
+        //Draft_Conditions_Cycles.min(4, 5, 3);
+        Conditions_Cycles.maxFromFourNum();
+
     }
 }
 
