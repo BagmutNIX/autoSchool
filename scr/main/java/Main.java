@@ -15,7 +15,7 @@ public class Main {
         //Arrays.descArrayOrder();
         //Arrays.measureQuantityOfSymbols();
         //Arrays.viceVersa();
-        Arrays.divideArray();
+        //Arrays.divideArray();
 
 
     }

@@ -1,9 +1,7 @@
 package com.welcome;
 
-import java.io.IOException;
-
 public class Main2 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
        /*     System.out.println("What is your name? ");
             Scanner scanner = new Scanner(System.in);
@@ -15,7 +13,18 @@ public class Main2 {
         //Conditions_Cycles.minimum();
         //Conditions_Cycles.minimumFromFourth();
         //Draft_Conditions_Cycles.min(4, 5, 3);
-        Conditions_Cycles.maxFromFourNum();
+        //Conditions_Cycles.maxFromFourNum();
+        //Conditions_Cycles.maxFromFourNumOption2();
+        //Draft_Conditions_Cycles.maximumFromFourthCycle();
+        //Conditions_Cycles.threeNumbers();
+        //Conditions_Cycles.theSameNames();
+        //Conditions_Cycles.youAreTooYang();
+        //Draft_Conditions_Cycles.nameAgeDraft();
+        //Conditions_Cycles.guessNum();
+        //Conditions_Cycles.numFrom1to10();
+        //Conditions_Cycles.sentenceOutputCustomizedNumberOfTimes();
+        Conditions_Cycles.tenS();
+
 
     }
 }
