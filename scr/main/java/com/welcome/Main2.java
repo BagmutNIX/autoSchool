@@ -23,9 +23,11 @@ public class Main2 {
         //Conditions_Cycles.guessNum();
         //Conditions_Cycles.numFrom1to10();
         //Conditions_Cycles.sentenceOutputCustomizedNumberOfTimes();
-        Conditions_Cycles.tenS();
-
-
+        //Conditions_Cycles.tenS();
+        //Draft_Conditions_Cycles.tenS1();
+        //Conditions_Cycles.tenS1();
+        Conditions_Cycles.multiplicationTable();
+        //Draft_Conditions_Cycles.multiplicationTable1();
     }
 }
 

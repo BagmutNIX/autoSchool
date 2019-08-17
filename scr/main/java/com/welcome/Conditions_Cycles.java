@@ -203,11 +203,39 @@ public class Conditions_Cycles {
     }
 
     //11 Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
-    static void tenS() {
+    public static void tenS() {
         int i = 1;
         while (i <= 10) {
-            System.out.println(i);
+            System.out.println("SSSSSSSSSS");
             i++;
+        }
+    }
+
+    public static void tenS1() throws UnsupportedEncodingException, IOException {
+        int i = 0;
+        while (i++ < 10) {
+            int j = 0;
+            while (j++ < 10)
+                System.out.print("S");
+            System.out.println();
+        }
+    }
+
+    //12 Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
+    //Example output:
+    //1 2 3 4  5  6  7  8  9  10
+    //2 4 6 8  10 12 14 16 18 20
+    //3 6 9 12 15 18 21 24 27 30
+    public static void multiplicationTable() {
+        int i = 0;
+        while (i++ < 10) {
+            //System.out.println(i + " ");
+            int j = 0;
+            while (j++ < 10) {
+                System.out.print(i * j + " ");
+            }
+            j = 1;
+            System.out.println();
         }
     }
 }
