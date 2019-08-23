@@ -26,8 +26,15 @@ public class Main2 {
         //Conditions_Cycles.tenS();
         //Draft_Conditions_Cycles.tenS1();
         //Conditions_Cycles.tenS1();
-        Conditions_Cycles.multiplicationTable();
+        //Conditions_Cycles.multiplicationTable();
         //Draft_Conditions_Cycles.multiplicationTable1();
+        //Conditions_Cycles.evenNumbers();
+        //Conditions_Cycles.rectangleFronEights();
+        //Conditions_Cycles.triangle1010();
+        //Conditions_Cycles.linesFrom108();Cco
+        //Conditions_Cycles.affirmation();
+        Conditions_Cycles.countDown();
+
     }
 }
 
