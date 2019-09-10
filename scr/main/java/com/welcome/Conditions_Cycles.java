@@ -324,7 +324,7 @@ public class Conditions_Cycles {
     public static void countDown() throws InterruptedException {
         for (int i = 30; i >= 0; i--) {
             System.out.println(i);
-            Thread.sleep(100000);
+            Thread.sleep(500);
         }
         System.out.println("Bum!");
 
