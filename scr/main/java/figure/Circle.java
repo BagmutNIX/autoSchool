@@ -1,4 +1,4 @@
-package figur;
+package figure;
 
 public class Circle {
     

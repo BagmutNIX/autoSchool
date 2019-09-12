@@ -1,4 +1,4 @@
-package figur;
+package figure;
 
 import java.io.IOException;
 
