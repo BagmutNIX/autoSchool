@@ -2,7 +2,7 @@ package figure;
 
 import java.io.IOException;
 
-public class Triangle {
+public class Triangle extends Figure{
     public static void tSquare() throws IOException {
         double height = 15.8;
         double size1 = 20.9;
