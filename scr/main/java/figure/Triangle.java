@@ -3,12 +3,32 @@ package figure;
 import java.io.IOException;
 
 public class Triangle extends Figure{
-    public static void tSquare() throws IOException {
+    private double height = 0;
+    private double size1 = 0;
+    private  String objectName = "Triangle";
+
+
+    @Override
+    public double area() {
+        return 0.5 * height * size1;
+    }
+
+    @Override
+    public String name() {
+        return objectName;
+    }
+
+    @Override
+    public double size() {
+        return height;
+    }
+
+/*    public static void tSquare() throws IOException {
         double height = 15.8;
         double size1 = 20.9;
         double square = 0.5 * height * size1;
         System.out.println(square);
-    }
+    }*/
 }
     /*
     в этом классе:

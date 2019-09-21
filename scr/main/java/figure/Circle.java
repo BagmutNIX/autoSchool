@@ -5,7 +5,7 @@ public class Circle extends Figure {
     private double radius = 0;
     private String objectName = "Circle";
 
-    public Circle(double radius) {
+    public Circle() {
         this.radius = radius;
     }
 
