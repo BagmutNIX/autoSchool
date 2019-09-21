@@ -3,9 +3,10 @@ package figure;
 import java.io.IOException;
 
 public class Triangle extends Figure{
-    private double height = 0;
+    private  double height = 0;
     private double size1 = 0;
     private  String objectName = "Triangle";
+
 
 
     @Override

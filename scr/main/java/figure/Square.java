@@ -2,7 +2,7 @@ package figure;
 
 public class Square extends  Figure{
     private double size = 0;
-    private  String objectName = "Triangle";
+    private  String objectName = "Square";
 
     @Override
     public double area() {

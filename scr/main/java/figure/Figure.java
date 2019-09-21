@@ -7,4 +7,5 @@ public abstract class Figure {
     public void whatAmI() {
         System.out.println("I'm a figure");
     }
+
 }
