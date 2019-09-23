@@ -14,9 +14,11 @@ public class Main {
         circle.area();
         ArrayList<Figure> figures = new ArrayList<>();
         Figure figure = new Circle(10);
+        figures.add(figure);
+        showFigures(figures);
     }
 
-    public static void main(ArrayList<Figure> figures) throws IOException {
+    public static void showFigures(ArrayList<Figure> figures) throws IOException {
         for (Figure figure : figures) {
             System.out.println("Name: " + figure.name());
             System.out.println("Area: " + figure.area());

@@ -2,14 +2,14 @@ package figure;
 
 public class Circle extends Figure {
     //конструктор нужен для инициализации объекта/класса
-    private double radius = 0;
+    private double radius;
     private String objectName = "Circle";
 
     public Circle() {
     }
 
-    public Circle(double radius) {
-        this.radius = radius;
+    public Circle(double r) {
+        radius = r;
     }
 
     public double area() {
