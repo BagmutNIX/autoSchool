@@ -1,8 +1,21 @@
 package figure;
 
-public class Square extends  Figure{
+import java.util.ArrayList;
+
+public class Square extends Figure {
+
+    private String objectName = "Square";
+    private double xTopLeft;
+    private double yTopLeft; // https://screencast.nixsolutions.com/dove/picpick_wUqBwvPAZm.png
     private double size = 0;
-    private  String objectName = "Square";
+    private String color;
+
+    public Square(double xTopLeft, double yTopLeft, double s, String c) {
+        this.xTopLeft = xTopLeft;
+        this.yTopLeft = yTopLeft;
+        size = s;
+        color = c;
+    }
 
     @Override
     public double area() {
@@ -15,9 +28,24 @@ public class Square extends  Figure{
     }
 
     @Override
+    public ArrayList<Double> coordinates() {
+        ArrayList<Double> coords = new ArrayList<>();
+        coords.add((double) xTopLeft);
+        coords.add((double) yTopLeft);
+        //coords.add((double) 3);
+        return coords;
+    }
+
+    @Override
     public double size() {
         return size;
     }
+
+    @Override
+    public String color() {
+        return color;
+    }
+}
 /*
     public static void sSquare() {
         double size = 12.77;
@@ -26,4 +54,4 @@ public class Square extends  Figure{
     }
 */
 
-}
+

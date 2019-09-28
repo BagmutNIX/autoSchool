@@ -1,13 +1,29 @@
 package figure;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class Triangle extends Figure{
-    private  double height = 0;
-    private double size1 = 0;
-    private  String objectName = "Triangle";
+public class Triangle extends Figure {
+    private String objectName = "Triangle";
+    private double xTop;
+    private double yTop;
+    private double xLeftSide;
+    private double yLeftSide;
+    private double height;
+    private double size1;
 
 
+    private String color;
+
+    public Triangle(double xTop, double yTop, double xLeftSide, double yLeftSide, double h, double s, String c) {
+        this.xTop = xTop;
+        this.yTop = yTop;
+        this.xLeftSide = xLeftSide;
+        this.yLeftSide = yLeftSide;
+        height = h;
+        size1 = s;
+        color = c;
+    }
 
     @Override
     public double area() {
@@ -20,9 +36,24 @@ public class Triangle extends Figure{
     }
 
     @Override
+    public ArrayList<Double> coordinates() {
+        ArrayList<Double> coords = new ArrayList<>();
+        coords.add((double) xTop);
+        coords.add((double) yTop);
+        coords.add((double) xLeftSide);
+        coords.add((double) yLeftSide);
+        return coords;
+    }
+
+    @Override
     public double size() {
         return height;
     }
+    @Override
+    public String color() {
+        return color;
+    }
+}
 
 /*    public static void tSquare() throws IOException {
         double height = 15.8;
@@ -30,7 +61,7 @@ public class Triangle extends Figure{
         double square = 0.5 * height * size1;
         System.out.println(square);
     }*/
-}
+
     /*
     в этом классе:
     private String name = 'ololo';
