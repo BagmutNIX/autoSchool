@@ -1,6 +1,5 @@
 package figure;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Triangle extends Figure {
@@ -43,11 +42,6 @@ public class Triangle extends Figure {
         coords.add((double) xLeftSide);
         coords.add((double) yLeftSide);
         return coords;
-    }
-
-    @Override
-    public double size() {
-        return height;
     }
     @Override
     public String color() {

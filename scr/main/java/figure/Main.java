@@ -2,6 +2,7 @@ package figure;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -23,7 +24,7 @@ public class Main {
 
         //Figure figure2 = new Square(34.233, "Yellow");
         figures.add(new Square(45, 78,33.45324, "Terracotta"));
-
+        
         showFigures(figures);
         }
 
@@ -34,7 +35,6 @@ public class Main {
             System.out.println("Color: " + ListOffigures.get(i).color());
             System.out.println("Coordinates: " + ListOffigures.get(i).coordinates());
             System.out.println();
-            //System.out.println();
         }
     }
 }

@@ -37,11 +37,6 @@ public class Square extends Figure {
     }
 
     @Override
-    public double size() {
-        return size;
-    }
-
-    @Override
     public String color() {
         return color;
     }

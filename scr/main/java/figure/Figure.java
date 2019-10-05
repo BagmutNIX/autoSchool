@@ -7,8 +7,6 @@ public abstract class Figure {
     public abstract ArrayList<Double> coordinates();
     public abstract double area();
     public abstract String color();
-    public abstract double size();
-
 
     //пример для себя (в котором я использую пустой конструктор в классе Circle)
     public void whatAmI() {

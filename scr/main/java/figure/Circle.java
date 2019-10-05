@@ -11,8 +11,7 @@ public class Circle extends Figure {
     private String color;
 
 
-    public Circle() {
-    }
+    public Circle() {}
 
     public Circle(double x, double y, double r, String c) {
         xCenter = x;
@@ -38,10 +37,6 @@ public class Circle extends Figure {
         //double square = 3.14 * size * size;
         // System.out.println(square);
         return Math.PI * radius * radius;
-    }
-
-    public double size() {
-        return radius;
     }
 
     public String color() {
