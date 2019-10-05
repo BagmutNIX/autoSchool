@@ -1,3 +1,5 @@
+package com.welcome;
+
 public class Comparing {
     public static int maxFinder(int a, int b) { //заголовок метода
 //ниже — тело метода

@@ -1,3 +1,5 @@
+package com.welcome;
+
 import java.util.Arrays;
 import java.util.Scanner;
 

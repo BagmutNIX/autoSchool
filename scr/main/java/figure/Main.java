@@ -2,7 +2,6 @@ package figure;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -23,10 +22,9 @@ public class Main {
         figures.add(figure1);
 
         //Figure figure2 = new Square(34.233, "Yellow");
-        figures.add(new Square(45, 78,33.45324, "Terracotta"));
-        
+        figures.add(new Square(45, 78, 33.45324, "Terracotta"));
         showFigures(figures);
-        }
+    }
 
     public static void showFigures(ArrayList<Figure> ListOffigures) throws IOException {
         for (int i = 0; i < ListOffigures.size(); i++) {

@@ -1,3 +1,5 @@
+package com.welcome;
+
 import java.util.Scanner;
 
 public class Rounding {

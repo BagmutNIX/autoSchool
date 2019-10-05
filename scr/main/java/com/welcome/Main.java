@@ -1,15 +1,27 @@
 package com.welcome;
 
-public class Main2 {
+public class Main {
     public static void main(String[] args) throws Exception {
-
-       /*     System.out.println("What is your name? ");
+/*                          System.out.println("What is your name? ");
             Scanner scanner = new Scanner(System.in);
             String name = scanner.nextLine();
             System.out.println(String.format("Hello %s", name));*/
         //Hello you = new Hello();
         //Hello.printHelloName();
 
+        //Rounding round = new Rounding();
+        //Rounding.roundNum();
+        //NumberOfDigits.countDigits();
+        //ReferenceTypesAndString.showSymbol();
+        //ReferenceTypesAndString.changeSubstr();
+        //ReferenceTypesAndString.longestWord();
+        //Draft_Arrays.example();
+        //Arrays.maxNumInArray(Arrays.initializeArray());
+        //Arrays.maxNumInArrayList(Arrays.initializeArrayList());
+        //Arrays.descArrayOrder();
+        //Arrays.measureQuantityOfSymbols();
+        //Arrays.viceVersa();
+        //Arrays.divideArray();
         //Conditions_Cycles.minimum();
         //Conditions_Cycles.minimumFromFourth();
         //Draft_Conditions_Cycles.min(4, 5, 3);
@@ -31,11 +43,8 @@ public class Main2 {
         //Conditions_Cycles.evenNumbers();
         //Conditions_Cycles.rectangleFronEights();
         //Conditions_Cycles.triangle1010();
-        //Conditions_Cycles.linesFrom108();Cco
+        //Conditions_Cycles.linesFrom108();
         //Conditions_Cycles.affirmation();
-        Conditions_Cycles.countDown();
-
+        //Conditions_Cycles.countDown();
     }
 }
-
-

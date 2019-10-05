@@ -1,3 +1,5 @@
+package com.welcome;
+
 import java.util.ArrayList;
 
 public class Draft_Arrays {
