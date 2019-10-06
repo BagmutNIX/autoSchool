@@ -252,7 +252,7 @@ public class Conditions_Cycles {
         Пример: m=2, n=4
                 8888
                 8888*/
-    public static void rectangleFronEights() throws IOException {
+    public static void rectangleFromEights() throws IOException {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Please enter height: ");

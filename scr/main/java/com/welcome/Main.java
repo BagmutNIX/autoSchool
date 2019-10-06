@@ -41,7 +41,7 @@ public class Main {
         //Conditions_Cycles.multiplicationTable();
         //Draft_Conditions_Cycles.multiplicationTable1();
         //Conditions_Cycles.evenNumbers();
-        //Conditions_Cycles.rectangleFronEights();
+        //Conditions_Cycles.rectangleFromEights();
         //Conditions_Cycles.triangle1010();
         Conditions_Cycles.linesFrom108();
         //Conditions_Cycles.affirmation();

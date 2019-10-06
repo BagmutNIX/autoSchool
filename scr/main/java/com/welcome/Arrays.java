@@ -58,7 +58,7 @@ public class Arrays {
         //int[] numbers = new int[5];
         ArrayList<Integer> numbers = new ArrayList<>();
         System.out.println("Fill up array of 5 elements: ");
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 5; i++) {
             numbers.add(Integer.parseInt(reader.readLine()));
         }
         for (int i = 0; i < numbers.size(); i++) {
