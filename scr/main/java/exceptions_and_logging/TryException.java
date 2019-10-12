@@ -1,7 +1,10 @@
 package exceptions_and_logging;
 
-public class Exception {
-    public static void linesFrom108() throws InterruptedException {
+public class TryException {
+    public static void linesFrom108() throws Exception {
+
+        throw new java.lang.Exception();
+
         for (int i = 0; i < 10; i++) {
             System.out.print("8 ");
         }
