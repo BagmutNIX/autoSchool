@@ -3,7 +3,7 @@ package com.welcome;
 import java.util.Scanner;
 
 public class Hello {
-
+//2.2 Дополнительное задание:
     public static void printHelloName() {
         System.out.println("What is your name? ");
         Scanner scanner = new Scanner(System.in);
