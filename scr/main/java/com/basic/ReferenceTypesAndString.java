@@ -1,6 +1,5 @@
-package com.welcome;
+package com.basic;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReferenceTypesAndString {
@@ -33,13 +32,13 @@ public class ReferenceTypesAndString {
         System.out.println("Enter first sentense: ");
         String str1 = text1.nextLine();
 
-        Scanner text2 = new Scanner(System.in);
+        //Scanner text2 = new Scanner(System.in);
         System.out.println("Enter second sentense");
-        String str2 = text2.nextLine();
+        String str2 = text1.nextLine();
 
-        Scanner text3 = new Scanner(System.in);
+        //Scanner text3 = new Scanner(System.in);
         System.out.println("Enter substitution: ");
-        String str3 = text3.nextLine();
+        String str3 = text1.nextLine();
 
         //String oldSentense = str1;
         //String oldPart = str2;

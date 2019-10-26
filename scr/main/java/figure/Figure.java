@@ -13,5 +13,8 @@ public abstract class Figure {
         System.out.println("I'm a figure");
     }
 
+/*    public double getArea()  {
+            }*/
+
 
 }

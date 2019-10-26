@@ -1,4 +1,4 @@
-package com.welcome;
+package com.basic;
 
 import java.io.*;
 import java.util.Random;
@@ -7,14 +7,14 @@ public class Conditions_Cycles {
     //1) Ввести с клавиатуры два числа, и вывести на экран минимальное из них.
     public static void minimum() throws IOException {
         Reader r = new InputStreamReader(System.in);
-        BufferedReader readerA = new BufferedReader(r);
+        BufferedReader reader = new BufferedReader(r);
         System.out.println("Enter first number: ");
-        int a = readerA.read();
+        int a = reader.read();
         Reader s = new InputStreamReader(System.in);
-        BufferedReader readerB = new BufferedReader(s);
+        //BufferedReader readerB = new BufferedReader(s);
         System.out.println("Enter second number: ");
 
-        int b = readerB.read();
+        int b = reader.read();
 
         if (a < b) {
             System.out.println("Minimum is first number");
@@ -23,7 +23,7 @@ public class Conditions_Cycles {
         }
     }
 
-    //2) Ввести с клавиатуры четыре числа, и вывести минимальное из них. Использую сохранение значений в переменные и if-else:
+    //2) Ввести с клавиатуры четыре числа, и вывести минимальное из них. Использую сохранение значений в переменные и if-else/ Это плохой подход:
     public static void minimumFromFourth() throws IOException {
         Reader r = new InputStreamReader(System.in);
         BufferedReader readerA = new BufferedReader(r);
@@ -156,8 +156,8 @@ public class Conditions_Cycles {
         secret = random.nextInt(20 + 1);
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
+        System.out.println("Программа загадала тебе число от 1 до 20ти. Попробуй его угадать: ");
         for (int i = 0; i < 7; i++) {
-            System.out.println("Программа загадала тебе число от 1 до 20ти. Попробуй его угадать: ");
             int number = Integer.parseInt(reader.readLine());
             //int number = Integer.parseInt(reader.readLine());
             if (number < secret) System.out.println("Мало");
@@ -276,7 +276,7 @@ public class Conditions_Cycles {
     public static void triangle1010() {
         //int i = 10;
         for (int i = 1; i <= 10; i++) {
-            for (int j = 0; j <= i; j++) {
+            for (int j = 1; j <= i; j++) {
                 for (int k = 0; k < 1; k++) System.out.print("8");
             }
             System.out.println(" ");
@@ -324,7 +324,7 @@ public class Conditions_Cycles {
     public static void countDown() throws InterruptedException {
         for (int i = 30; i >= 0; i--) {
             System.out.println(i);
-            Thread.sleep(500);
+            Thread.sleep(100);
         }
         System.out.println("Bum!");
 

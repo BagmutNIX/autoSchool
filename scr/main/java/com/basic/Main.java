@@ -1,4 +1,4 @@
-package com.welcome;
+package com.basic;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -45,7 +45,7 @@ public class Main {
         //Conditions_Cycles.evenNumbers();
         //Conditions_Cycles.rectangleFromEights();
         //Conditions_Cycles.triangle1010();
-        Conditions_Cycles.linesFrom108();
+        //Conditions_Cycles.linesFrom108();
         //Conditions_Cycles.affirmation();
         //Conditions_Cycles.countDown();
     }

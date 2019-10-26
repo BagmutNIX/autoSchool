@@ -1,4 +1,4 @@
-package com.welcome;
+package com.basic;
 
 public class Comparing {
     public static int maxFinder(int a, int b) { //заголовок метода

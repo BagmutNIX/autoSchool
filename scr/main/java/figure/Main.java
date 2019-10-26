@@ -24,6 +24,10 @@ public class Main {
         //Figure figure2 = new Square(34.233, "Yellow");
         figures.add(new Square(45, 78, 33.45324, "Terracotta"));
         showFigures(figures);
+
+        Figure[] figureArray = new Figure[10];
+
+
     }
 
     public static void showFigures(ArrayList<Figure> ListOffigures) throws IOException {

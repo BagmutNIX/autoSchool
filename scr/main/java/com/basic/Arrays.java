@@ -1,12 +1,9 @@
-package com.welcome;
-
-import com.sun.org.apache.xpath.internal.operations.String;
+package com.basic;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -24,7 +21,7 @@ public class Arrays {
     public static int[] initializeArray() throws IOException {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
-        int[] numbers = new int[5];
+        int[] numbers = new int[20];
         //ArrayList<int> numbers = new ArrayList<int>();
         System.out.println("Fill up array of 5 elements: ");
         for (int i = 0; i < numbers.length; i++) {
@@ -89,7 +86,7 @@ public class Arrays {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Enter words: ");
-        java.lang.String[] words = new java.lang.String[10];
+        String[] words = new java.lang.String[10];
         for (int i = 0; i < 8; i++) {
             java.lang.String s = reader.readLine();
             words[i] = s;
@@ -110,16 +107,16 @@ public class Arrays {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         java.lang.String[] words = new java.lang.String[10];
-        int[] numbers = new int[10];
+        int numbers[] = new int[10];
         System.out.println("Enter strings: ");
         for (int i = 0; i < words.length; i++) {
             java.lang.String s = reader.readLine();
             words[i] = s;
         }
         for (int i = 0; i < words.length; i++) {
-            int t = words[i].length();
-            System.out.println(t);
-        }
+            numbers[i] = words[i].length();
+            System.out.println(numbers[i]);
+            }
     }
 
     /*-4-

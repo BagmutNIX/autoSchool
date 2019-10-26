@@ -1,8 +1,6 @@
-package com.welcome;
+package com.basic;
 
 import java.util.Scanner;
-
-import static java.lang.System.out;
 
 public class TypeConversion {
 
