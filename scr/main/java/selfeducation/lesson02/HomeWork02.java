@@ -69,18 +69,24 @@ public class HomeWork02 {
         a) используя цикл for
         b) используя цикл while*/
         System.out.println("==========================================================");
-        System.out.println("Инициализируем массив с помощью цикла for: ");
-        int array[] = new int[5];
+        System.out.println("Fill up array due to for cycle: ");
+        int[] array = new int[10];
+        System.out.print("[");
         for (int i = 0; i < array.length; i++) {
-            System.out.println(i);
+            array[i] = (int) Math.round(Math.random() * 30 - 15);
+            System.out.print(array[i] + ", ");
         }
+        System.out.print("]");
 
-        System.out.println("Инициализируем массив с помощью цикла while: ");
+        System.out.println("Fill up array due to while cycle: ");
+        System.out.print("[");
         int j = 0;
         while (j < array.length) {
-            System.out.println(j);
+            array[j] = (int) Math.round(Math.random() * 100 - 5);
+            System.out.print(array[j] + ", ");
             j++;
         }
+        System.out.print("]");
 
         /* 13)    Нарисовать треугольник заданной размерности. Пример для размера 6:
          *
@@ -96,7 +102,7 @@ public class HomeWork02 {
         System.out.println("Введите один символ для наполнения треугольника: ");
         String symbol = scanner.next();
         for (int i = 0; i <= size; i++) {
-            for (int k = i; k <= size; k++) {
+            for (int k = 0; k < i; k++) {
                 System.out.print(symbol);
             }
             System.out.println(symbol);

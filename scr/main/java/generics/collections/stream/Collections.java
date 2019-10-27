@@ -1,10 +1,9 @@
 package generics.collections.stream;
 
 
-import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.io.IOException;
 import java.util.*;
+
 /*1. HashSet из растений
         Создать коллекцию HashSet с типом элементов String.
         Добавить в неё 10 строк: арбуз, банан, вишня, груша, дыня, ежевика, жень-шень, земляника, ирис, картофель.
