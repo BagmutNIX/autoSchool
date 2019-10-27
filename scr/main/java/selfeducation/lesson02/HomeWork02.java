@@ -76,7 +76,7 @@ public class HomeWork02 {
             array[i] = (int) Math.round(Math.random() * 30 - 15);
             System.out.print(array[i] + ", ");
         }
-        System.out.print("]");
+        System.out.println("]");
 
         System.out.println("Fill up array due to while cycle: ");
         System.out.print("[");
@@ -86,7 +86,7 @@ public class HomeWork02 {
             System.out.print(array[j] + ", ");
             j++;
         }
-        System.out.print("]");
+        System.out.println("]");
 
         /* 13)    Нарисовать треугольник заданной размерности. Пример для размера 6:
          *
