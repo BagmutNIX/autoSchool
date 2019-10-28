@@ -11,16 +11,48 @@ public class HomeWork02 {
         System.out.println("Программа определения max, min и middle числа");
         System.out.println("Введите 3 числа:");
         Scanner scanner = new Scanner(System.in);
+        //создаём массив:
+        double[] array = new double[3];
+        //наполняем массив 3мя элементами:
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextDouble();
+        }
+        //System.out.println(array[2]);
+
+        //определяем максимальное:
+        double max = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
+        }
+        System.out.println("Максимум: " + max);
+        //определяем минимальное:
+        double min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min)
+                min = array[i];
+        }
+        System.out.println("Минимум: " + min);
+        //определяем среднее:
+        double avr = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != max && array[i] != min)
+                System.out.println("Среднее: " + array[i]);
+        }
+
+        //способ 2 - через if else:
+        System.out.println("Введите 3 разных числа:");
         double a = scanner.nextDouble();
         double b = scanner.nextDouble();
         double c = scanner.nextDouble();
-        if (a > b && a > c && b > c) System.out.printf(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", a, c, b);
-        else if (a > b && a > c && c > b) System.out.printf(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", a, b, c);
-        else if (b > a && b > c && a > c)
+        if (a > b && a >= c && b >= c) System.out.printf(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", a, c, b);
+        else if (a >= b && a > c && c >= b)
+            System.out.printf(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", a, b, c);
+        else if (b >= a && b >= c && a >= c)
             System.out.println(format(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", b, a, c));
-        else if (b > a && b > c && c > a)
+        else if (b >= a && b >= c && c >= a)
             System.out.println(format(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", b, c, a));
-        else if (c > a && c > b && a > b)
+        else if (c >= a && c >= b && a >= b)
             System.out.println(format(" Максимум: %f,%n, Минимум: %f,%n, Среднее: %f,%n", c, b, a));
         else System.out.printf(" Максимум: %f,%n Минимум: %f,%n Среднее: %f,%n", c, a, b);
 
@@ -69,21 +101,21 @@ public class HomeWork02 {
         a) используя цикл for
         b) используя цикл while*/
         System.out.println("==========================================================");
-        System.out.println("Fill up array due to for cycle: ");
-        int[] array = new int[10];
+        System.out.println("Random filling up array via For cycle: ");
+        int[] randomeArray = new int[10];
         System.out.print("[");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) Math.round(Math.random() * 30 - 15);
-            System.out.print(array[i] + ", ");
+        for (int i = 0; i < randomeArray.length; i++) {
+            randomeArray[i] = (int) Math.round(Math.random() * 30 - 15);
+            System.out.print(randomeArray[i] + ", ");
         }
         System.out.println("]");
 
-        System.out.println("Fill up array due to while cycle: ");
+        System.out.println("Random filling up array via While cycle: ");
         System.out.print("[");
         int j = 0;
-        while (j < array.length) {
-            array[j] = (int) Math.round(Math.random() * 100 - 5);
-            System.out.print(array[j] + ", ");
+        while (j < randomeArray.length) {
+            randomeArray[j] = (int) Math.round(Math.random() * 100 - 5);
+            System.out.print(randomeArray[j] + ", ");
             j++;
         }
         System.out.println("]");
