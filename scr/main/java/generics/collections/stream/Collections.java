@@ -70,7 +70,7 @@ public class Collections {
         mapCats.put("Anfisa", "Balinese");
         mapCats.put("Vitamin", "Little bambino");
         mapCats.put("Pushistic", "British Semi-longhair");
-        mapCats.put("Jamajka", "California Spangled");
+        mapCats.put("Island", "California Spangled");
         mapCats.put("", "");
         mapCats.put("Milka", "Devon Rex");
         Iterator<Map.Entry<java.lang.String, java.lang.String>> iterator = mapCats.entrySet().iterator();
