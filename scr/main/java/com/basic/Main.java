@@ -41,12 +41,12 @@ public class Main {
         //Draft_Conditions_Cycles.tenS1();
         //Conditions_Cycles.tenS1();
         //Conditions_Cycles.multiplicationTable();
-        //Draft_Conditions_Cycles.multiplicationTable1();
-        //Conditions_Cycles.evenNumbers();
-        //Conditions_Cycles.rectangleFromEights();
-        //Conditions_Cycles.triangle1010();
-        //Conditions_Cycles.linesFrom108();
-        //Conditions_Cycles.affirmation();
-        //Conditions_Cycles.countDown();
+        Draft_Conditions_Cycles.multiplicationTable1();
+        Conditions_Cycles.evenNumbers();
+        Conditions_Cycles.rectangleFromEights();
+        Conditions_Cycles.triangle1010();
+        Conditions_Cycles.linesFrom108();
+        Conditions_Cycles.affirmation();
+        Conditions_Cycles.countDown();
     }
 }
