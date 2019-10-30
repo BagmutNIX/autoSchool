@@ -85,7 +85,7 @@ public class Arrays {
     public static void descArrayOrder() throws IOException {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
-        System.out.println("Enter words: ");
+        System.out.println("Enter 10 words: ");
         String[] words = new java.lang.String[10];
         for (int i = 0; i < 8; i++) {
             java.lang.String s = reader.readLine();
