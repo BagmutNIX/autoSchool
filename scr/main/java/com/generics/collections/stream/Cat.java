@@ -1,4 +1,4 @@
-package generics.collections.stream;
+package com.generics.collections.stream;
 
 public class Cat {
     public String name;

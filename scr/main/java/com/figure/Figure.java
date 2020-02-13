@@ -1,4 +1,4 @@
-package figure;
+package com.figure;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public abstract class Figure {
 
     //пример для себя (в котором я использую пустой конструктор в классе Circle)
     public void whatAmI() {
-        System.out.println("I'm a figure");
+        System.out.println("I'm a com.figure");
     }
 
 /*    public double getArea()  {

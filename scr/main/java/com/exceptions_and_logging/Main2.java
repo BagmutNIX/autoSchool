@@ -1,4 +1,4 @@
-package exceptions_and_logging;
+package com.exceptions_and_logging;
 
 public class Main2 {
     public static void main(String[] args) throws Exception {

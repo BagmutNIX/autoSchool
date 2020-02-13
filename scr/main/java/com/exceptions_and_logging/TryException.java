@@ -1,4 +1,4 @@
-package exceptions_and_logging;
+package com.exceptions_and_logging;
 
 public class TryException {
     public static void linesFrom108() throws Exception {

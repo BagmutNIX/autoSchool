@@ -9,6 +9,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FindWordsStartWithDOption2 {
+    /*    1) Напишите программу, которая:
+         - считывает строку
+	     - выводит исходную строку
+	     - выводит количество и список слов, которые начинаются на букву 'd'*/
     public static void getWordsStartingWithD2() throws IOException {
         System.out.println("=============================================================================");
         System.out.println("The program outputs the number of words that begin with 'd' letter:");
