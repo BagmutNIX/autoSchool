@@ -1,5 +1,7 @@
 package com.basic;
 
+import selfeducation.DraftConditionsAndCycles;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 /*        2.2 Создать простой Java-проект (консольное приложение), которое при запуске выводит в консоль “Hello, world!”.
@@ -41,12 +43,12 @@ public class Main {
         //Draft_Conditions_Cycles.tenS1();
         //Conditions_Cycles.tenS1();
         //Conditions_Cycles.multiplicationTable();
-        Draft_Conditions_Cycles.multiplicationTable1();
-        Conditions_Cycles.evenNumbers();
-        Conditions_Cycles.rectangleFromEights();
-        Conditions_Cycles.triangle1010();
-        Conditions_Cycles.linesFrom108();
-        Conditions_Cycles.affirmation();
-        Conditions_Cycles.countDown();
+        DraftConditionsAndCycles.multiplicationTable1();
+        ConditionsAndCycles.evenNumbers();
+        ConditionsAndCycles.rectangleFromEights();
+        ConditionsAndCycles.triangle1010();
+        ConditionsAndCycles.linesFrom108();
+        ConditionsAndCycles.affirmation();
+        ConditionsAndCycles.countDown();
     }
 }

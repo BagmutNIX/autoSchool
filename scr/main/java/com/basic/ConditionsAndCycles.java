@@ -3,7 +3,7 @@ package com.basic;
 import java.io.*;
 import java.util.Random;
 
-public class Conditions_Cycles {
+public class ConditionsAndCycles {
     //1) Ввести с клавиатуры два числа, и вывести на экран минимальное из них.
     public static void minimum() throws IOException {
         Reader r = new InputStreamReader(System.in);

@@ -1,8 +1,8 @@
-package com.basic;
+package selfeducation;
 
 import java.util.ArrayList;
 
-public class Draft_Arrays {
+public class DraftArrays {
     public static void example() {
         int[] numbers = new int[21];
         //int output = 0;

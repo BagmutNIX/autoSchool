@@ -1,8 +1,8 @@
-package com.basic;
+package selfeducation;
 
 import java.io.*;
 
-public class Draft_Conditions_Cycles {
+public class DraftConditionsAndCycles {
     public static int min(int... numbers) {
         if (numbers.length == 0)
             throw new IllegalArgumentException("Нет чисел!");

@@ -1,10 +1,12 @@
 /.classpath
 .classpath
 .idea/
+/.idea/
 .project
 .allure
 *.prefs
-target
+target/
+/out/
 test-output
 */target
 *.class
