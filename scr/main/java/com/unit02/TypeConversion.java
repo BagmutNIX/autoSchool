@@ -8,7 +8,8 @@ public class TypeConversion {
     /*1 В переменных q и w хранятся два натуральных числа. Создайте программу, выводящую на экран результат деления q на w с остатком.
     Пример вывода программы (для случая, когда в q хранится 21, а в w хранится 8): 21 / 8 = 2 и 5 в остатке*/
     public static void restOfDividing() {
-
+        System.out.println("================================================================================");
+        System.out.println("Task 2.2.1:");
  /* int q = 21;
     int w = 8;
     int x;*/
@@ -19,11 +20,13 @@ public class TypeConversion {
         System.out.print("Enter w: ");
         w = input.nextInt();
         x = q % w;
-        System.out.print("Result is " + x);
+        System.out.println("Result is " + x);
     }
 
     /*2 В переменной n хранится натуральное двузначное число. Создайте программу, вычисляющую и выводящую на экран сумму цифр числа n.*/
     public static void sumOfDigits() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.2.2:");
         Scanner number = new Scanner(System.in);
         System.out.print("Enter n: ");
         int n = number.nextInt();
@@ -53,9 +56,36 @@ public class TypeConversion {
 
     /*3 В переменной n хранится вещественное число с ненулевой дробной частью. Создайте программу, округляющую число n до ближайшего целого и выводящую результат на экран.*/
     public static void roundNum() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.2.3:");
         Scanner numToRound = new Scanner(System.in);
         System.out.print("Enter n: ");
         float n = numToRound.nextFloat();
-        System.out.print("Round result is: " + Math.round(n));
+        System.out.println("Round result is: " + Math.round(n));
+    }
+
+    /*4 Даны три переменные a, b и c. Изменить значения этих переменных так, чтобы в a хранилось значение a+b,
+    в b хранилась разность старых значений c−a, а в c хранилось сумма старых значений a+b+c.
+    Например, a=0, b=2, c=5, тогда новые значения a=2, b=5 и c=7.*/
+    public static void changeValueOption1() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.2.4 Option_1:");
+        int a = 0;
+        int b = 2;
+        int c = 5;
+        a = a + b; // or a =+ b;
+        b = c - (a - b);
+        c = (a - b + c - a) + (b - c + a) + c; // c = c - b + b - c + a + c = a + c;
+        System.out.println(String.format("Answer is: a = %d, b = %d, c = %d", a, b, c));
+    }
+
+    public static void changeValueOption2(int x, int y, int z){
+        System.out.println("================================================================================");
+        System.out.println("Task 2.2.4 Option_2:");
+        x =+ y;
+        y = z - (x - y);
+        y = z - x*2 + y;
+        z = x + z;
+        System.out.println("Новые значения: a = " + x + ", b = " + y + ", c = " + z);
     }
 }

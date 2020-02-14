@@ -13,12 +13,6 @@ public class Main {
         //Hello you = new Hello();
         //Hello.printHelloName();
 
-        //Rounding round = new Rounding();
-        //Rounding.roundNum();
-        //NumberOfDigits.countDigits();
-        //ReferenceTypesAndString.showSymbol();
-        //ReferenceTypesAndString.changeSubstr();
-        //ReferenceTypesAndString.longestWord();
         //Draft_Arrays.example();
         //Arrays.maxNumInArray(Arrays.initializeArray());
         //Arrays.maxNumInArrayList(Arrays.initializeArrayList());
