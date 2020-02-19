@@ -3,7 +3,9 @@ package com.unit02;
 import java.util.Scanner;
 
 public class Hello {
-//2.2 Дополнительное задание:
+
+    //2.2.1 Дополнительное задание:
+
     public static void printHelloName() {
         System.out.println("What is your name? ");
         Scanner scanner = new Scanner(System.in);

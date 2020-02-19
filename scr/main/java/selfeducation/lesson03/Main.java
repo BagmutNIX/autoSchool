@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //FindWordsStartWithD.getWordsStartingWithD();
         //FindWordsStartWithDOption2.getWordsStartingWithD2();
-        NumberOfSubstrings.findNumberOfSubstrings();
+        //NumberOfSubstrings.findNumberOfSubstrings();
         //NumberOfSupstringsOption2.findNumberOfSubstringsO2();
 
     }

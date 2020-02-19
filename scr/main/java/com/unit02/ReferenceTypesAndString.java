@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class ReferenceTypesAndString {
 
-    /*1 Дана строка. Вывести первый, последний и средний (если он есть) символы. Напишите программу, которая выводит часть строки до первой встреченной точки,
-        включая точку. Также предусмотрите вывод количества пробелов.*/
-
+    /*2.4.1 Дана строка. Вывести первый, последний и средний (если он есть) символы.
+    Напишите программу, которая выводит часть строки до первой встреченной точки,
+    включая точку. Также предусмотрите вывод количества пробелов.*/
     public static void showSymbol() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.4.1:");
         Scanner text = new Scanner(System.in);
         System.out.println("Enter sentense: ");
         String str = text.nextLine();
@@ -26,8 +28,11 @@ public class ReferenceTypesAndString {
         //return str;
     }
 
-    /*2. Найти в строке указанную подстроку и заменить ее на новую. Строку, ее подстроку для замены и новую подстроку вводит пользователь.*/
+    /*2.4.2 Найти в строке указанную подстроку и заменить ее на новую.
+    Строку, ее подстроку для замены и новую подстроку вводит пользователь.*/
     public static void changeSubstr() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.4.2:");
         Scanner text1 = new Scanner(System.in);
         System.out.println("Enter first sentense: ");
         String str1 = text1.nextLine();
@@ -46,8 +51,12 @@ public class ReferenceTypesAndString {
         System.out.println("Updated sentense: " + newSentense);
     }
 
-    /*3 Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.*/
+    /*2.4.3 Вводится строка слов, разделенных пробелами.
+    Найти самое длинное слово и вывести его на экран.
+    Случай, когда самых длинных слов может быть несколько, не обрабатывать.*/
     public static void longestWord() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.4.3:");
         Scanner text4 = new Scanner(System.in);
         System.out.println("Enter sentense: ");
         String str4 = text4.nextLine();
@@ -64,9 +73,7 @@ public class ReferenceTypesAndString {
                 max = str4Parts[i].length();
                 word = str4Parts[i];
             }
-
         }
         System.out.println("The longest world: " + word);
-
     }
 }

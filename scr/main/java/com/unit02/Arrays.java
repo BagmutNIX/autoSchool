@@ -1,4 +1,4 @@
-package com.basic;
+package com.unit02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,28 +9,25 @@ import java.util.ArrayList;
 
 public class Arrays {
 
-/*    -1-
-
-    Максимальное среди массива на 20 чисел
-
-1. В методе initializeArray():
-  1.1. Создайте массив на 20 чисел
-  1.2. Считайте с консоли 20 чисел и заполните ими массив
-2. Метод max(int[] array) должен находить максимальное число из элементов массива*/
-
+    /* 2.5.1 Максимальное среди массива на 20 чисел
+    1. В методе initializeArray():
+    1.1. Создайте массив на 20 чисел
+    1.2. Считайте с консоли 20 чисел и заполните ими массив
+    2. Метод max(int[] array) должен находить максимальное число из элементов массива*/
     public static int[] initializeArray() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.5.1:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         int[] numbers = new int[20];
         //ArrayList<int> numbers = new ArrayList<int>();
-        System.out.println("Fill up array of 5 elements: ");
+        System.out.println("Fill up array of 20 elements: ");
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = Integer.parseInt(reader.readLine());
-
         }
         for (int i = 0; i < numbers.length; i++) {
             //numbers[i] = i + 1;
-            System.out.println("You entered: " + numbers[i]);
+            //System.out.println("You entered: " + numbers[i]);
         }
         return numbers;
     }
@@ -44,10 +41,9 @@ public class Arrays {
         }
         System.out.println("Maximum is: " + maximum);
         return maximum;
-
     }
 
-    //Решение этой же задачи с помощью класса ArrayList:
+    /* 2.5.1 с помощью класса ArrayList:*/
 
     public static ArrayList<Integer> initializeArrayList() throws IOException {
         Reader r = new InputStreamReader(System.in);
@@ -74,6 +70,7 @@ public class Arrays {
         System.out.println("Maximum is: " + maximum);
         return maximum;
     }
+
 /*-2-
 
     Массив из строчек в обратном порядке
