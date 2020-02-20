@@ -1,19 +1,19 @@
-package com.basic;
+package com.unit02.lesson6;
 
 import java.io.*;
 import java.util.Random;
 
 public class ConditionsAndCycles {
-    //1) Ввести с клавиатуры два числа, и вывести на экран минимальное из них.
+    //2.6.1 Ввести с клавиатуры два числа, и вывести на экран минимальное из них
     public static void minimum() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.1:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
+
         System.out.println("Enter first number: ");
         int a = reader.read();
-        Reader s = new InputStreamReader(System.in);
-        //BufferedReader readerB = new BufferedReader(s);
         System.out.println("Enter second number: ");
-
         int b = reader.read();
 
         if (a < b) {
@@ -23,39 +23,13 @@ public class ConditionsAndCycles {
         }
     }
 
-    //2) Ввести с клавиатуры четыре числа, и вывести минимальное из них. Использую сохранение значений в переменные и if-else/ Это плохой подход:
-    public static void minimumFromFourth() throws IOException {
-        Reader r = new InputStreamReader(System.in);
-        BufferedReader readerA = new BufferedReader(r);
-        System.out.print("Enter a: ");
-        int a = Integer.parseInt(readerA.readLine());
-        ;
-        Reader s = new InputStreamReader(System.in);
-        BufferedReader readerB = new BufferedReader(s);
-        System.out.print("Enter b: ");
-        int b = Integer.parseInt(readerB.readLine());
-        Reader t = new InputStreamReader(System.in);
-        BufferedReader readerC = new BufferedReader(t);
-        System.out.print("Enter c: ");
-        int c = Integer.parseInt(readerC.readLine());
-        Reader u = new InputStreamReader(System.in);
-        BufferedReader readerD = new BufferedReader(u);
-        System.out.print("Enter d: ");
-        int d = Integer.parseInt(readerD.readLine());
-        if (a < b && a < c && a < d) {
-            System.out.println("Minimum is a");
-        } else if (b < a && b < c && b < d)
-            System.out.println("Minimum is b");
-        else if (c < a && c < b && c < d)
-            System.out.println("Minimum is c");
-        else System.out.println("Minimun is d");
-    }
-
-    //2) Ввести с клавиатуры четыре числа, и вывести максимальное из них. Использую массив и 2 цикла:
+    //2.6.2 Ввести с клавиатуры четыре числа, и вывести максимальное из них
     public static void maxFromFourNum() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.2:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
-        System.out.println("Enter num: ");
+        //System.out.println("Enter num: ");
         int[] array = new int[4];
         System.out.println("Please enter 4 numbers: ");
         for (int i = 0; i < array.length; i++) {
@@ -68,26 +42,10 @@ public class ConditionsAndCycles {
         System.out.println("Maximum is: " + largest);
     }
 
-    //2) Ввести с клавиатуры четыре числа, и вывести максимальное из них. Использую массив и if-else:
-    public static void maxFromFourNumOption2() throws IOException {
-        Reader r = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(r);
-        System.out.println("Enter 4 numbers: ");
-        int[] light = new int[4];
-        for (int i = 0; i < light.length; i++) {
-            light[i] = Integer.parseInt(reader.readLine());
-        }
-        if (light[0] > light[1] && light[0] > light[2] && light[0] > light[3])
-            System.out.println("Maximum is: " + light[0]);
-        else if (light[1] > light[0] && light[1] > light[2] && light[1] > light[3])
-            System.out.println("Maximum is: " + light[1]);
-        else if (light[2] > light[0] && light[2] > light[1] && light[2] > light[3])
-            System.out.println("Maximum is: " + light[2]);
-        else System.out.println("Maximum is: " + light[3]);
-    }
-
-    //3) Ввести с клавиатуры три числа, и вывести их в порядке убывания.
+    //2.6.3 Ввести с клавиатуры три числа, и вывести их в порядке убывания.
     public static void threeNumbers() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.3:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Enter three numbers: ");
@@ -116,6 +74,8 @@ public class ConditionsAndCycles {
 
     //4 Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
     public static void theSameNames() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.6:");
         System.out.println("Enter first name: ");
         InputStream inputStream = System.in;
         Reader inputStreamReader = new InputStreamReader(inputStream);

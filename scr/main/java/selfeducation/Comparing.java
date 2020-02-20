@@ -1,4 +1,4 @@
-package com.basic;
+package selfeducation;
 
 public class Comparing {
     public static int maxFinder(int a, int b) { //заголовок метода

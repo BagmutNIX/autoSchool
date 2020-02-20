@@ -7,25 +7,25 @@
         В Main2 классе подключить этот пакет, и вначале программы запросить имя человека, присвоить его переменной класса Hello,
         потом поприветствовать его, в конце - попрощаться перед закрытием программы. Между ‘hello’ и ‘bye’ будет ваше “Hello, world!”.
 */
-package com.unit02;
-import com.welcome.Hello;
+package com.unit02.lesson2.welcome;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-public class Main2 {
-    //2.2.1 Дополнительное задание:
-    private static Hello var1 = new Hello();
-    public static void main(String[] args) throws IOException {
-        System.out.print("What is your name? ");
-        Reader r = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(r);
-        String name = reader.readLine();
-        var1.setupName(name);
-        var1.welcome();
-        System.out.println("Hello, world!");
-        var1.byeBay();
+public class Hello {
+    private static String humanName;
+
+    public static void setupName(String name) {
+        humanName = name;
+    }
+
+    public static void welcome() {
+        System.out.println("Hello, " + humanName);
+    }
+
+    public static void byeBay() {
+        System.out.println("Bye, " + humanName);
     }
 }

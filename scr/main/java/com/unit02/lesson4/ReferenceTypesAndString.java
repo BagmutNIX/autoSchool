@@ -1,4 +1,4 @@
-package com.unit02;
+package com.unit02.lesson4;
 
 import java.util.Scanner;
 
@@ -58,7 +58,7 @@ public class ReferenceTypesAndString {
         System.out.println("================================================================================");
         System.out.println("Task 2.4.3:");
         Scanner text4 = new Scanner(System.in);
-        System.out.println("Enter sentense: ");
+        System.out.println("Enter sentence: ");
         String str4 = text4.nextLine();
 
         String[] str4Parts = str4.split(" ");

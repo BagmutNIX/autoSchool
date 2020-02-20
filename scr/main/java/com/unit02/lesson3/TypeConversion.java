@@ -1,5 +1,5 @@
 
-package com.unit02;
+package com.unit02.lesson3;
 
 import java.util.Scanner;
 
