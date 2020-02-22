@@ -1,6 +1,8 @@
 package com.unit02.lesson6;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class ConditionsAndCycles {
@@ -12,15 +14,14 @@ public class ConditionsAndCycles {
         BufferedReader reader = new BufferedReader(r);
 
         System.out.println("Enter first number: ");
-        int a = reader.read();
+        int a = Integer.parseInt(reader.readLine());
         System.out.println("Enter second number: ");
-        int b = reader.read();
+        int b = Integer.parseInt(reader.readLine());
 
-        if (a < b) {
-            System.out.println("Minimum is first number");
-        } else {
-            System.out.println("Minimum is second number");
-        }
+        if (a < b) System.out.println("Minimum is first number");
+        else if (a == b) System.out.println("Both numbers are equal");
+        else System.out.println("Minimum is second number");
+
     }
 
     //2.6.2 Ввести с клавиатуры четыре числа, и вывести максимальное из них
@@ -36,54 +37,55 @@ public class ConditionsAndCycles {
             array[i] = Integer.parseInt(reader.readLine());
         }
         int largest = 0;
-        for (int j = 0; j < array.length; j++) {
-            if (largest < array[j]) largest = array[j];
+        for (int i = 0; i < array.length; i++) {
+            if (largest < array[i]) largest = array[i];
         }
         System.out.println("Maximum is: " + largest);
     }
 
-    //2.6.3 Ввести с клавиатуры три числа, и вывести их в порядке убывания.
+    //2.6.3 Ввести с клавиатуры три числа, и вывести их в порядке убывания
     public static void threeNumbers() throws IOException {
         System.out.println("================================================================================");
         System.out.println("Task 2.6.3:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
-        System.out.println("Enter three numbers: ");
+        System.out.println("Enter three integer numbers: ");
         int[] descArray = new int[3];
         for (int i = 0; i < descArray.length; i++) {
             descArray[i] = Integer.parseInt(reader.readLine());
         }
-        if (descArray[0] < descArray[1] && descArray[0] < descArray[2]) {
-            if (descArray[1] < descArray[2])
-                System.out.println("The sequence is: " + descArray[2] + ", " + descArray[1] + ", " + descArray[0]);
-            else
-                System.out.println("The sequence is: " + descArray[1] + ", " + descArray[2] + ", " + descArray[0]);
+        //boolean isSorted = false; //source https://vertex-academy.com/tutorials/ru/sortirovka-puzyrkom-v-java/
+        for (int i = descArray.length - 1; i > 0; i--) {
+            //for (int i = 0; i < descArray.length - 1; i++) { //this condition is also possible, but longer
+            for (int j = 0; j < i; j++) {
+                if (descArray[j] < descArray[j + 1]) {
+                    int tmp = descArray[j];
+                    descArray[j] = descArray[j + 1];
+                    descArray[j + 1] = tmp;
+                }
+            }
         }
-        if (descArray[1] < descArray[0] && descArray[1] < descArray[2]) {
-            if (descArray[0] > descArray[2])
-                System.out.println("The sequence is: " + descArray[0] + ", " + descArray[2] + ", " + descArray[1]);
-            else System.out.println("The sequence is: " + descArray[2] + ", " + descArray[0] + ", " + descArray[1]);
+        //instead of bubble sorting it could be just
+        // Arrays.sort(descArray, Collections.reverseOrder()); (array should be Integer)
+        System.out.println("Sorted desc:");
+        for (int i = 0; i < descArray.length; i++) {
+            System.out.println(descArray[i]);
         }
-        if (descArray[2] < descArray[0] && descArray[2] < descArray[1]) {
-            if (descArray[0] > descArray[1])
-                System.out.println("The sequence is: " + descArray[0] + ", " + descArray[1] + ", " + descArray[2]);
-            else
-                System.out.println("The sequence is: " + descArray[1] + ", " + descArray[0] + ", " + descArray[2]);
-        }
+        System.out.println("One more way to output array: " + Arrays.toString(descArray));
     }
 
-    //4 Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
+    /* 2.6.4 Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны».
+    Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».*/
     public static void theSameNames() throws IOException {
         System.out.println("================================================================================");
-        System.out.println("Task 2.6.6:");
+        System.out.println("Task 2.6.4:");
         System.out.println("Enter first name: ");
         InputStream inputStream = System.in;
         Reader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader1 = new BufferedReader(inputStreamReader);
-        String name1 = bufferedReader1.readLine();
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String name1 = bufferedReader.readLine();
         System.out.println("Enter second name: ");
-        //BufferedReader bufferedReader2 = new BufferedReader(inputStreamReader);
-        String name2 = bufferedReader1.readLine();
+        String name2 = bufferedReader.readLine();
         //System.out.println("You entered: " + name1 + ", " + name2);
 /*        int numName1 = Integer.parseInt(name1);
         System.out.println(numName1);*/
@@ -92,8 +94,11 @@ public class ConditionsAndCycles {
         else System.out.println("Они разные");
     }
 
-    //5-6 Ввести с клавиатуры имя и возраст. Если возраст меньше 18 вывести надпись «Подрасти еще». Если возраст больше 20 вывести надпись «И 18-ти достаточно»
+    /* 2.6.5 and 2.6.6 Ввести с клавиатуры имя и возраст. Если возраст меньше 18 вывести надпись «Подрасти еще».
+    Если возраст больше 20 вывести надпись «И 18-ти достаточно»*/
     public static void youAreTooYang() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.5, 2.6.6:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("What's your name? ");
@@ -107,8 +112,10 @@ public class ConditionsAndCycles {
         else if (numAge > 20) System.out.println("И 18-ти достаточно");
     }
 
-    //7 За семь попыток угадать число. При каждой попытке вам будет выводиться сообщение - "Мало" или "Много". Если угадаете, уложившись в семь попыток, то выводится сообщение "Угадал :)"
-    // и программа завершает работу. Если по истечении 7 попыток число не угадывается, то выводится сообщение "Не угадал :(" и завершается работа.
+    /* 2.6.7 За семь попыток угадать число. При каждой попытке вам будет выводиться сообщение - "Мало" или "Много".
+    Если угадаете, уложившись в семь попыток, то выводится сообщение "Угадал :)"
+    и программа завершает работу. Если по истечении 7 попыток число не угадывается, то выводится
+    сообщение "Не угадал :(" и завершается работа.*/
     public static void guessNum() throws IOException {
         Random random = new Random();
         int secret;
@@ -122,12 +129,20 @@ public class ConditionsAndCycles {
             //int number = Integer.parseInt(reader.readLine());
             if (number < secret) System.out.println("Мало");
             else if (number > secret) System.out.println("Много");
-            else System.out.println("Бро, ты угадал!");
+            else {
+                System.out.println("Бро, ты угадал!");
+            }
         }
+        int numberSeven = Integer.parseInt(reader.readLine());
+        if (numberSeven != secret) System.out.println("Не угадал :(");
+        else System.out.println("Бро, ты угадал!");
     }
 
-    //8-9 Вывести на экран числа от 1 до 10, используя цикл while. Вывести на экран числа от 10 до 1, используя цикл while.
+    /* 2.6.8, 2.6.9 Вывести на экран числа от 1 до 10, используя цикл while.
+    Вывести на экран числа от 10 до 1, используя цикл while.*/
     public static void numFrom1to10() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.8, 2.6.9:");
         System.out.println("Сначала по возрастанию: ");
         int i = 1;
         while (i <= 10) {
