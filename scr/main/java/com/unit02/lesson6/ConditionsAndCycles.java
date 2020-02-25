@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class ConditionsAndCycles {
-    //2.6.1 Ввести с клавиатуры два числа, и вывести на экран минимальное из них
+    // 2.6.1 Ввести с клавиатуры два числа, и вывести на экран минимальное из них
     public static void minimum() throws IOException {
         System.out.println("================================================================================");
         System.out.println("Task 2.6.1:");
@@ -24,7 +24,7 @@ public class ConditionsAndCycles {
 
     }
 
-    //2.6.2 Ввести с клавиатуры четыре числа, и вывести максимальное из них
+    // 2.6.2 Ввести с клавиатуры четыре числа, и вывести максимальное из них
     public static void maxFromFourNum() throws IOException {
         System.out.println("================================================================================");
         System.out.println("Task 2.6.2:");
@@ -43,7 +43,7 @@ public class ConditionsAndCycles {
         System.out.println("Maximum is: " + largest);
     }
 
-    //2.6.3 Ввести с клавиатуры три числа, и вывести их в порядке убывания
+    // 2.6.3 Ввести с клавиатуры три числа, и вывести их в порядке убывания
     public static void threeNumbers() throws IOException {
         System.out.println("================================================================================");
         System.out.println("Task 2.6.3:");
@@ -89,8 +89,8 @@ public class ConditionsAndCycles {
         //System.out.println("You entered: " + name1 + ", " + name2);
 /*        int numName1 = Integer.parseInt(name1);
         System.out.println(numName1);*/
-        if (name1.toUpperCase().equals(name2.toUpperCase())) System.out.println("Имена идентичные");
-        else if (name1.length() == name2.length()) System.out.println("У имён равны длины");
+        if (name1.toUpperCase().equals(name2.toUpperCase())) System.out.println("Имена идентичны");
+        else if (name1.length() == name2.length()) System.out.println("Длины имен равны");
         else System.out.println("Они разные");
     }
 
@@ -124,13 +124,14 @@ public class ConditionsAndCycles {
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Программа загадала тебе число от 1 до 20ти. Попробуй его угадать: ");
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 6; i++) {
             int number = Integer.parseInt(reader.readLine());
             //int number = Integer.parseInt(reader.readLine());
             if (number < secret) System.out.println("Мало");
             else if (number > secret) System.out.println("Много");
             else {
                 System.out.println("Бро, ты угадал!");
+                return;
             }
         }
         int numberSeven = Integer.parseInt(reader.readLine());
@@ -151,42 +152,47 @@ public class ConditionsAndCycles {
         }
         System.out.println("А теперь по убыванию: ");
         int j = 10;
-        while (j >= 1) {
+        while (j > 0) {
             System.out.println(j);
             j--;
         }
     }
 
-    /*  10 Ввести с клавиатуры строку и число N. Вывести на экран строку N раз, используя цикл while.
+    /* 2.6.10 Ввести с клавиатуры строку и число N. Вывести на экран строку N раз, используя цикл while.
         Пример ввода:
         абв
         2
         Пример вывода:
         абв
-        абв*/
+        абв */
     public static void sentenceOutputCustomizedNumberOfTimes() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.10:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Enter sentence: ");
         String str = reader.readLine();
         System.out.println("Enter how many times would you like to repeat it: ");
         int num = Integer.parseInt(reader.readLine());
-        while (num >= 1) {
+        while (num > 0) {
             System.out.println(str);
             num--;
         }
     }
 
-    //11 Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
-    public static void tenS() {
+    // 2.6.11 Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
+    public static void tenS1() {
         int i = 1;
         while (i <= 10) {
+
             System.out.println("SSSSSSSSSS");
             i++;
         }
     }
 
-    public static void tenS1() throws UnsupportedEncodingException, IOException {
+    public static void tenS() throws UnsupportedEncodingException, IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.11:");
         int i = 0;
         while (i++ < 10) {
             int j = 0;
@@ -196,12 +202,14 @@ public class ConditionsAndCycles {
         }
     }
 
-    //12 Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
-    //Example output:
-    //1 2 3 4  5  6  7  8  9  10
-    //2 4 6 8  10 12 14 16 18 20
-    //3 6 9 12 15 18 21 24 27 30
+    /* 2.6.12 Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
+    Example output:
+    1 2 3 4  5  6  7  8  9  10
+    2 4 6 8  10 12 14 16 18 20
+    3 6 9 12 15 18 21 24 27 30*/
     public static void multiplicationTable() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.12:");
         int i = 0;
         while (i++ < 10) {
             //System.out.println(i + " ");
@@ -214,25 +222,29 @@ public class ConditionsAndCycles {
         }
     }
 
-    //13 Используя цикл for вывести на экран чётные числа от 1 до 100 включительно. Через пробел либо с новой строки.
+    // 2.6.13 Используя цикл for, вывести на экран чётные числа от 1 до 100 включительно. Через пробел либо с новой строки
     public static void evenNumbers() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.13:");
         //int i = 0;
         for (int i = 2; i <= 100; i = i + 2) {
             System.out.print(i + " ");
         }
     }
 
-    /*14 Ввести с клавиатуры два числа m и n.
-        Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок.
+    /* 2.6.14 Ввести с клавиатуры два числа m и n.
+        Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок
         Пример: m=2, n=4
                 8888
                 8888*/
     public static void rectangleFromEights() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.14:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Please enter height: ");
         int m = Integer.parseInt(reader.readLine());
-        System.out.println("Please enter wide: ");
+        System.out.println("Please enter width: ");
         int n = Integer.parseInt(reader.readLine());
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -242,13 +254,15 @@ public class ConditionsAndCycles {
         }
     }
 
-    //15 Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
-    //Пример:
-    //8
-    //88
-    //888
-    //...
+    /* 2.6.15 Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10
+    Пример:
+    8
+    88
+    888
+    ...*/
     public static void triangle1010() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.15:");
         //int i = 10;
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= i; j++) {
@@ -258,10 +272,12 @@ public class ConditionsAndCycles {
         }
     }
 
-    /*    16 Используя цикл for вывести на экран:
+    /* 2.6.16 Используя цикл for вывести на экран:
                 - горизонтальную линию из 10 восьмёрок
                 - вертикальную линию из 10 восьмёрок.*/
     public static void linesFrom108() {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.16:");
         for (int i = 0; i < 10; i++) {
             System.out.print("8 ");
         }
@@ -270,25 +286,25 @@ public class ConditionsAndCycles {
         }
     }
 
-    /*
-        17 Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
+    /* 2.6.17 Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
         Пример текста:
-        Света любит меня.
-        …
-    */
+        Света любит меня
+        … */
     public static void affirmation() throws IOException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.17:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
         System.out.println("Enter lovely name: ");
         String name = reader.readLine();
         for (int i = 0; i < 10; i++) {
-            System.out.println(name + " любит меня");
+            System.out.println(name + " любит меня.");
         }
     }
 
-    /* 18 Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!». Программа должна уменьшать число 10 раз в секунду.
+    /* 2.6.18 Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!». Программа должна уменьшать число 10 раз в секунду.
     Для того чтобы вставить в программу задержку, воспользуйся функцией:
-                Thread.sleep(100); //задержка на одну десятую секунды.
+                Thread.sleep(100); //задержка на одну десятую секунды
         Пример:
                 30
                 29
@@ -297,6 +313,8 @@ public class ConditionsAndCycles {
                 0
         Бум!  */
     public static void countDown() throws InterruptedException {
+        System.out.println("================================================================================");
+        System.out.println("Task 2.6.18:");
         for (int i = 30; i >= 0; i--) {
             System.out.println(i);
             Thread.sleep(100);
