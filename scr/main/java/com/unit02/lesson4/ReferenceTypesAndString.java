@@ -11,12 +11,12 @@ public class ReferenceTypesAndString {
         System.out.println("================================================================================");
         System.out.println("Task 2.4.1:");
         Scanner text = new Scanner(System.in);
-        System.out.println("Enter sentense: ");
+        System.out.println("Enter sentence: ");
         String str = text.nextLine();
 
         //выводим первый и последний символы:
         char first = str.charAt(0);
-        System.out.println("first character: " + first);
+       // System.out.println("first character: " + first);
         System.out.println("first character: " + str.substring(0, 1));
         System.out.println("last character: " + str.substring(str.length() - 1));
 

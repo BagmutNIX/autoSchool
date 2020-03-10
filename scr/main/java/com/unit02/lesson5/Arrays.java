@@ -25,12 +25,7 @@ public class Arrays {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = Integer.parseInt(reader.readLine());
         }
-        for (int i = 0; i < numbers.length; i++) {
-            //numbers[i] = i + 1;
-            //System.out.println("You entered: " + numbers[i]);
-        }
         return numbers;
-        //maxNumInArray()
     }
 
     public static double maxNumInArray(double numbers[]) throws IOException {
@@ -108,8 +103,6 @@ public class Arrays {
         for (int i = 0; i < words.length; i++) {
             java.lang.String s = reader.readLine();
             words[i] = s;
-        }
-        for (int i = 0; i < words.length; i++) {
             numbers[i] = words[i].length();
             System.out.println(numbers[i]);
         }

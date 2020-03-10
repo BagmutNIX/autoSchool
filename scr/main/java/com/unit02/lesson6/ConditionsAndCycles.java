@@ -2,7 +2,6 @@ package com.unit02.lesson6;
 
 import java.io.*;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class ConditionsAndCycles {
@@ -217,7 +216,6 @@ public class ConditionsAndCycles {
             while (j++ < 10) {
                 System.out.print(i * j + " ");
             }
-            j = 1;
             System.out.println();
         }
     }
@@ -266,7 +264,7 @@ public class ConditionsAndCycles {
         //int i = 10;
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= i; j++) {
-                for (int k = 0; k < 1; k++) System.out.print("8");
+                System.out.print("8");
             }
             System.out.println(" ");
         }
