@@ -82,5 +82,11 @@ public class HashSetCollections {
         //String key = pair.getKey();
         for (Map.Entry<String, String> pair : fruitsCategories.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
+        /*3. Коллекция HashMap из котов
+
+Есть класс Cat, с полем имя (name, String).
+Создать коллекцию HashMap<String, Cat>.
+Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
+Вывести результат на экран, каждый элемент с новой строки.*/
     }
 }
