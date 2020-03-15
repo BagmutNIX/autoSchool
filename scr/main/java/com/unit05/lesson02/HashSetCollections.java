@@ -89,11 +89,11 @@ public class HashSetCollections {
     Создать коллекцию HashMap<String, Cat>.
     Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
     Вывести результат на экран, каждый элемент с новой строки.*/
-    public static void catsMap() {
+    public static void catsMapRandomFill() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.3:");
-        Cat myobj1;
-        Map<Cat, Random> cats = new HashMap<>();
+        CatRandom myobj1;
+        Map<CatRandom, Random> cats = new HashMap<>();
         //cats.put("Siamsky", myobj1);
 
 /*        System.out.println("");
@@ -113,15 +113,46 @@ public class HashSetCollections {
 
         for (int i = 0; i < 10; i++) {
             Random random = new Random();
-            myobj1 = new Cat(random);
+            myobj1 = new CatRandom(random);
             cats.put(myobj1, random);
         }
 
         System.out.println("Cats output:");
-        for (Map.Entry<Cat, Random> pair : cats.entrySet())
+        for (Map.Entry<CatRandom, Random> pair : cats.entrySet())
             System.out.println(pair.getKey().toString() + " - " + pair.getValue().toString());
 
         System.out.println(Arrays.asList(cats));
         System.out.println(cats);
+    }
+
+
+    public static void catsMapManualFill() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.3:");
+        Cat myobj1;
+        Map<String, Cat> cats = new HashMap<>();
+        cats.put("Grey", new Cat("Barsic"));
+        cats.put("White", new Cat("Fary"));
+        cats.put("Orange", new Cat("Paul"));
+
+        System.out.println("Cats output:");
+        for(String colour : cats.keySet()){
+            System.out.print(colour + " - ");
+            for (Cat cat : cats.values()){
+                System.out.println(cat);
+            }
+        }
+
+        System.out.println("Cats key output:");
+        System.out.println(cats.keySet());
+    }
+
+    /*5.2.4 Вывести на экран список ключей
+    Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
+    Вывести на экран список ключей, каждый элемент с новой строки.*/
+
+    public static void keysOutput() {
+        Map<String, String> collection = new HashMap<>();
+
     }
 }

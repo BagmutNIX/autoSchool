@@ -16,14 +16,17 @@ public class Main {
         Вывести содержимое коллекции на экран, каждый элемент с новой строки.
         Пример вывода (тут показана только одна строка):
         картофель – клубень*/
-        HashSetCollections.fruitsCategories();
+        //HashSetCollections.fruitsCategories();
 
         /* 5.2.3 Коллекция HashMap из котов
         Есть класс Cat, с полем имя (name, String).
         Создать коллекцию HashMap<String, Cat>.
         Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
         Вывести результат на экран, каждый элемент с новой строки.*/
-        HashSetCollections.catsMap();
+        //HashSetCollections.catsMapRandomFill();
+
+        HashSetCollections.catsMapManualFill();
+
 
 
     }
