@@ -82,11 +82,46 @@ public class HashSetCollections {
         //String key = pair.getKey();
         for (Map.Entry<String, String> pair : fruitsCategories.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
-        /*3. Коллекция HashMap из котов
+    }
 
-Есть класс Cat, с полем имя (name, String).
-Создать коллекцию HashMap<String, Cat>.
-Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
-Вывести результат на экран, каждый элемент с новой строки.*/
+    /* 5.2.3 Коллекция HashMap из котов
+    Есть класс Cat, с полем имя (name, String).
+    Создать коллекцию HashMap<String, Cat>.
+    Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
+    Вывести результат на экран, каждый элемент с новой строки.*/
+    public static void catsMap() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.3:");
+        Cat myobj1;
+        Map<Cat, Random> cats = new HashMap<>();
+        //cats.put("Siamsky", myobj1);
+
+/*        System.out.println("");
+        System.out.println("Output through cycle while:");
+        Iterator<Map.Entry<Random, Cat>> iterator = cats.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Random, Cat> pair = iterator.next();
+            Random key = pair.getKey();
+            Cat value = pair.getValue();
+            System.out.println(key + " - " + value);
+        }
+
+        System.out.println("");
+        System.out.println("Cats output:");
+        for (Map.Entry<Random, Cat> pair : cats.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue().toString());*/
+
+        for (int i = 0; i < 10; i++) {
+            Random random = new Random();
+            myobj1 = new Cat(random);
+            cats.put(myobj1, random);
+        }
+
+        System.out.println("Cats output:");
+        for (Map.Entry<Cat, Random> pair : cats.entrySet())
+            System.out.println(pair.getKey().toString() + " - " + pair.getValue().toString());
+
+        System.out.println(Arrays.asList(cats));
+        System.out.println(cats);
     }
 }
