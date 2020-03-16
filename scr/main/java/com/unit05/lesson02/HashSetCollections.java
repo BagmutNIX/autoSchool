@@ -222,4 +222,37 @@ public class HashSetCollections {
         for (String value : collectionValuesOutput.values())
             System.out.println(value);
     }
+
+    /* 5.2.6 Коллекция HashMap из Object
+    Есть коллекция HashMap<String, Object>, туда занесли 10 различных пар объектов.
+    Вывести содержимое коллекции на экран, каждый элемент с новой строки.
+    Пример вывода (тут показана только одна строка):
+    Sim - 5*/
+
+    public static void collectionObjectValue() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.6:");
+
+        Map<String, Object> collectionObjectValue = new HashMap<>();
+        collectionObjectValue.put("System", 8979);
+        collectionObjectValue.put("Second", "String");
+        collectionObjectValue.put("Third", 9870897.9080);
+        collectionObjectValue.put("Destiny", 98327049328704987.9038);
+        collectionObjectValue.put("Birthday", "On Baly");
+        collectionObjectValue.put("Male", 8979);
+        collectionObjectValue.put("FemALE", "String");
+        collectionObjectValue.put("Eighth", 9870897.9080);
+        collectionObjectValue.put("Major", 98327049328704987.9038);
+        collectionObjectValue.put("Ukraine", null);
+
+        System.out.println("Collection with Object type values output:");
+        for(Map.Entry<String, Object> pair : collectionObjectValue.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+    }
+
+    /* 5.2.7 5 различных строчек в списке
+    1. Создай список строк.
+    2. Добавь в него 5 различных строчек.
+    3. Выведи его размер на экран.
+    4. Используя цикл, выведи его содержимое на экран, каждое значение с новой строки*/
 }
