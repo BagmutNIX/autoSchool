@@ -13,4 +13,11 @@ public class CatRandom {
     public Random getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "CatRandom{" +
+                "name=" + name +
+                '}';
+    }
 }

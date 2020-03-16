@@ -1,4 +1,4 @@
-package com.generics.collections.stream;
+package selfeducation;
 
 import java.util.Scanner;
 

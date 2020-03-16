@@ -24,10 +24,16 @@ public class Main {
         Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
         Вывести результат на экран, каждый элемент с новой строки.*/
         //HashSetCollections.catsMapRandomFill();
+        //HashSetCollections.catsMapManualFill();
 
-        HashSetCollections.catsMapManualFill();
+        /* 5.2.4 Вывести на экран список ключей
+        Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
+        Вывести на экран список ключей, каждый элемент с новой строки.*/
+        HashSetCollections.collectionKeysOutput();
 
-
-
+        /* 5.2.5 Вывести на экран список значений
+        Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
+        Вывести на экран список значений, каждый элемент с новой строки.*/
+        HashSetCollections.collectionValuesOutput();
     }
 }

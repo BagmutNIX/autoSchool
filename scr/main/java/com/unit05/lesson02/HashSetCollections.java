@@ -89,6 +89,7 @@ public class HashSetCollections {
     Создать коллекцию HashMap<String, Cat>.
     Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
     Вывести результат на экран, каждый элемент с новой строки.*/
+
     public static void catsMapRandomFill() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.3:");
@@ -119,40 +120,106 @@ public class HashSetCollections {
 
         System.out.println("Cats output:");
         for (Map.Entry<CatRandom, Random> pair : cats.entrySet())
-            System.out.println(pair.getKey().toString() + " - " + pair.getValue().toString());
+            System.out.println(pair.getKey() + " - " + pair.getValue());
 
-        System.out.println(Arrays.asList(cats));
-        System.out.println(cats);
+        System.out.println(Collections.singletonList(cats.toString()));
+
+        System.out.println(cats.toString());
     }
-
 
     public static void catsMapManualFill() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.3:");
-        Cat myobj1;
         Map<String, Cat> cats = new HashMap<>();
         cats.put("Grey", new Cat("Barsic"));
+        cats.put("Smoke", new Cat("Timka"));
+        cats.put("Blue", new Cat("Bro"));
         cats.put("White", new Cat("Fary"));
         cats.put("Orange", new Cat("Paul"));
+        cats.put("Yellow", new Cat("Murrr"));
+        cats.put("Green", new Cat("Dough"));
+        cats.put("Purple", new Cat("Chilly"));
+        cats.put("Ninth", new Cat("Pitt"));
+        cats.put("Pink ", new Cat("Captain"));
 
-        System.out.println("Cats output:");
+/*        System.out.println("Cats test output:");
         for(String colour : cats.keySet()){
             System.out.print(colour + " - ");
             for (Cat cat : cats.values()){
                 System.out.println(cat);
             }
-        }
+        }*/
 
-        System.out.println("Cats key output:");
-        System.out.println(cats.keySet());
+        System.out.println("Cats output when cat name is a value:");
+        for (Map.Entry<String, Cat> pair : cats.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+
+        Map<Cat, String> catsKeyIsName = new HashMap<>();
+        catsKeyIsName.put(new Cat("Barsic"), "Grey");
+        catsKeyIsName.put(new Cat("Timka"), "Smoke");
+        catsKeyIsName.put(new Cat("Bro"), "Blue");
+        catsKeyIsName.put(new Cat("Fary"), "White");
+        catsKeyIsName.put(new Cat("Paul"), "Orange");
+        catsKeyIsName.put(new Cat("Murrr"), "Yellow");
+        catsKeyIsName.put(new Cat("Dough"), "Green");
+        catsKeyIsName.put(new Cat("Chilly"), "Purple");
+        catsKeyIsName.put(new Cat("Pitt"), "Ninth");
+        catsKeyIsName.put(new Cat("Captain"), "Pink ");
+
+        System.out.println("");
+        System.out.println("Cats output when cat name is a key:");
+        for (Map.Entry<Cat, String> pair : catsKeyIsName.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
     }
 
-    /*5.2.4 Вывести на экран список ключей
+    /* 5.2.4 Вывести на экран список ключей
     Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
     Вывести на экран список ключей, каждый элемент с новой строки.*/
 
-    public static void keysOutput() {
-        Map<String, String> collection = new HashMap<>();
+    public static void collectionKeysOutput() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.4:");
 
+        Map<String, String> collectionKeysOutput = new HashMap<>();
+        collectionKeysOutput.put("Nusha", "Siamese");
+        collectionKeysOutput.put("Barsik", "Maine Coon");
+        collectionKeysOutput.put("Leyla", "Australian Mist");
+        collectionKeysOutput.put("Murzik", "Bengali");
+        collectionKeysOutput.put("Anfisa", "Balinese");
+        collectionKeysOutput.put("Vitamin", "Little bambino");
+        collectionKeysOutput.put("Pushistic", "British Semi-longhair");
+        collectionKeysOutput.put("Island", "California Spangled");
+        collectionKeysOutput.put("", "");
+        collectionKeysOutput.put("Milka", "Devon Rex");
+
+        System.out.println("");
+        System.out.println("Keys list: ");
+        for (String key : collectionKeysOutput.keySet())
+            System.out.println(key);
+    }
+
+    /* 5.2.5 Вывести на экран список значений
+    Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
+    Вывести на экран список значений, каждый элемент с новой строки.*/
+
+    public static void collectionValuesOutput() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.5:");
+        Map<String, String> collectionValuesOutput = new HashMap<>();
+        collectionValuesOutput.put("Nusha", "Siamese");
+        collectionValuesOutput.put("Barsik", "Maine Coon");
+        collectionValuesOutput.put("Leyla", "Australian Mist");
+        collectionValuesOutput.put("Murzik", "Bengali");
+        collectionValuesOutput.put("Anfisa", "Balinese");
+        collectionValuesOutput.put("Vitamin", "Little bambino");
+        collectionValuesOutput.put("Pushistic", "British Semi-longhair");
+        collectionValuesOutput.put("Island", "California Spangled");
+        collectionValuesOutput.put("", "");
+        collectionValuesOutput.put("Milka", "Devon Rex");
+
+        System.out.println("");
+        System.out.println("Values list:");
+        for (String value : collectionValuesOutput.values())
+            System.out.println(value);
     }
 }
