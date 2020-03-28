@@ -246,7 +246,7 @@ public class HashSetCollections {
         collectionObjectValue.put("Ukraine", null);
 
         System.out.println("Collection with Object type values output:");
-        for(Map.Entry<String, Object> pair : collectionObjectValue.entrySet())
+        for (Map.Entry<String, Object> pair : collectionObjectValue.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
     }
 
@@ -255,4 +255,70 @@ public class HashSetCollections {
     2. Добавь в него 5 различных строчек.
     3. Выведи его размер на экран.
     4. Используя цикл, выведи его содержимое на экран, каждое значение с новой строки*/
+
+    public static void someList() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.7:");
+
+        List<String> someStrings = new ArrayList<>();
+        someStrings.add("First string");
+        someStrings.add("Second string");
+        someStrings.add("Third string");
+        someStrings.add("Fourth string");
+        someStrings.add("Fifth string");
+
+        System.out.println("The arrayList contains " + someStrings.size() + " strings:");
+        for (int i = 0; i < someStrings.size(); i++) {
+            System.out.println(someStrings.get(i));
+        }
+        System.out.println("Second output option:");
+        for (String x : someStrings) System.out.println(x);
+    }
+
+    /*8. Самая длинная строка
+    1. Создай список строк.
+    2. Считай с клавиатуры 5 строк и добавь в список.
+    3. Используя цикл, найди самую длинную строку в списке.
+    4. Выведи найденную строку на экран.
+    5. Если таких строк несколько, выведи каждую с новой строки.*/
+    public static void longestString() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.8:");
+        List<String> writeStrings = new ArrayList<String>() {{
+            add("First element");
+            add("Second element");
+            add("Third element");
+        }};
+        writeStrings.add("Fourth element");
+        Scanner scanner = new Scanner((System.in));
+        System.out.println("Enter 5 strings: ");
+
+        for (int i = 0; i < 5; i++) {
+            String name = scanner.nextLine();
+            writeStrings.add(name);
+        }
+        //System.out.println("Test output: " + Arrays.asList(writeStrings));
+
+        int max = 0;
+        int idx = -1;
+        for (int i = 0; i < writeStrings.size(); i++) {
+
+            int l = writeStrings.get(i).length();
+            if (l > max) { max = l;
+            idx = i;}
+        }
+        System.out.println("The first longest string is:");
+        System.out.println(writeStrings.get(idx));
+        //System.out.println(max);
+
+        for (String s : writeStrings)
+            if (s.length() == max) System.out.println("The longest string is: " + s);
+    }
+
+    /*9. Самая короткая строка
+    1. Создай список строк.
+    2. Считай с клавиатуры 5 строк и добавь в список.
+    3. Используя цикл, найди самую короткую строку в списке.
+    4. Выведи найденную строку на экран.
+    5. Если таких строк несколько, выведи каждую с новой строки*/
 }
