@@ -290,7 +290,7 @@ public class HashSetCollections {
             add("Third element");
         }};
         writeStrings.add("Fourth element");
-        Scanner scanner = new Scanner((System.in));
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 5 strings: ");
 
         for (int i = 0; i < 5; i++) {
@@ -321,4 +321,58 @@ public class HashSetCollections {
     3. Используя цикл, найди самую короткую строку в списке.
     4. Выведи найденную строку на экран.
     5. Если таких строк несколько, выведи каждую с новой строки*/
+    public static void shortestString() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.9:");
+        List<String> shortestString = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter 5 strings:");
+        for (int i = 0; i < 5; i++) {
+            String s = scanner.nextLine();
+            shortestString.add(s);
+        }
+
+        int min = 1000000;
+        for (int i = 0; i < shortestString.size(); i++) {
+            if (shortestString.get(i).length() < min) min = shortestString.get(i).length();
+        }
+        //System.out.println("Minimum lenth is: " + min);
+
+        for (String t : shortestString)
+            if (t.length() == min) System.out.println("The shortest element is: " + t);
+    }
+
+    /*10. 10 строчек в начало списка
+    1. Создай список строк в методе main.
+    2. Добавь в него 10 строчек с клавиатуры, но только добавлять не в конец списка, а в начало.
+    3. Используя цикл, выведи содержимое на экран, каждое значение с новой строки.*/
+    public static void addtoBeginning(List<String> addToBeginningList) {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.10:");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter 10 strings:");
+        for (int i = 0; i < 10; i++) {
+            addToBeginningList.add(0,scanner.nextLine());
+        }
+        System.out.println("List output: ");
+        for (String s : addToBeginningList) System.out.println(s);
+    }
+    /*11. Удали последнюю строку и вставь её в начало
+    1. Создай список строк.
+    2. Добавь в него 5 строчек с клавиатуры.
+    3. Удали последнюю строку и вставь её в начало. Повторить 13 раз.
+    4. Используя цикл, выведи содержимое на экран, каждое значение с новой строки*/
+     public static void cutAndPastString() {
+         System.out.println("================================================================================");
+         System.out.println("Task 5.2.11:");
+         List<String> cutAndPastString = new ArrayList<>();
+         Scanner scanner = new Scanner(System.in);
+         System.out.println("Enter 5 strings:");
+         for (int i = 0; i < 5; i++) {
+             cutAndPastString.add(scanner.nextLine());
+         }
+
+     }
+
 }
