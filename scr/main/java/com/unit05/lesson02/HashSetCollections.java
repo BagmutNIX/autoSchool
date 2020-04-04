@@ -304,8 +304,10 @@ public class HashSetCollections {
         for (int i = 0; i < writeStrings.size(); i++) {
 
             int l = writeStrings.get(i).length();
-            if (l > max) { max = l;
-            idx = i;}
+            if (l > max) {
+                max = l;
+                idx = i;
+            }
         }
         System.out.println("The first longest string is:");
         System.out.println(writeStrings.get(idx));
@@ -353,26 +355,30 @@ public class HashSetCollections {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 10 strings:");
         for (int i = 0; i < 10; i++) {
-            addToBeginningList.add(0,scanner.nextLine());
+            addToBeginningList.add(0, scanner.nextLine());
         }
         System.out.println("List output: ");
         for (String s : addToBeginningList) System.out.println(s);
     }
+
     /*11. Удали последнюю строку и вставь её в начало
     1. Создай список строк.
     2. Добавь в него 5 строчек с клавиатуры.
     3. Удали последнюю строку и вставь её в начало. Повторить 13 раз.
     4. Используя цикл, выведи содержимое на экран, каждое значение с новой строки*/
-     public static void cutAndPastString() {
-         System.out.println("================================================================================");
-         System.out.println("Task 5.2.11:");
-         List<String> cutAndPastString = new ArrayList<>();
-         Scanner scanner = new Scanner(System.in);
-         System.out.println("Enter 5 strings:");
-         for (int i = 0; i < 5; i++) {
-             cutAndPastString.add(scanner.nextLine());
-         }
-
-     }
-
+    public static void cutAndPastString() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.11:");
+        List<String> cutAndPastString = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter 5 strings:");
+        for (int i = 0; i < 5; i++) {
+            cutAndPastString.add(scanner.nextLine());
+        }
+        for (int i = 0; i < 13; i++) {
+            cutAndPastString.add(0, cutAndPastString.remove(cutAndPastString.size() - 1));
+        }
+        System.out.println("Updated list:");
+        for (String x : cutAndPastString) System.out.println(x);
+    }
 }
