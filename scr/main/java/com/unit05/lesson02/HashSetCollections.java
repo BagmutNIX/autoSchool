@@ -275,7 +275,7 @@ public class HashSetCollections {
         for (String x : someStrings) System.out.println(x);
     }
 
-    /*8. Самая длинная строка
+    /* 5.2.8 Самая длинная строка
     1. Создай список строк.
     2. Считай с клавиатуры 5 строк и добавь в список.
     3. Используя цикл, найди самую длинную строку в списке.
@@ -317,7 +317,7 @@ public class HashSetCollections {
             if (s.length() == max) System.out.println("The longest string is: " + s);
     }
 
-    /*9. Самая короткая строка
+    /* 5.2.9 Самая короткая строка
     1. Создай список строк.
     2. Считай с клавиатуры 5 строк и добавь в список.
     3. Используя цикл, найди самую короткую строку в списке.
@@ -345,7 +345,7 @@ public class HashSetCollections {
             if (t.length() == min) System.out.println("The shortest element is: " + t);
     }
 
-    /*10. 10 строчек в начало списка
+    /* 5.2.10 10 строчек в начало списка
     1. Создай список строк в методе main.
     2. Добавь в него 10 строчек с клавиатуры, но только добавлять не в конец списка, а в начало.
     3. Используя цикл, выведи содержимое на экран, каждое значение с новой строки.*/
@@ -361,7 +361,7 @@ public class HashSetCollections {
         for (String s : addToBeginningList) System.out.println(s);
     }
 
-    /*11. Удали последнюю строку и вставь её в начало
+    /* 5.2.11 Удали последнюю строку и вставь её в начало
     1. Создай список строк.
     2. Добавь в него 5 строчек с клавиатуры.
     3. Удали последнюю строку и вставь её в начало. Повторить 13 раз.
@@ -380,5 +380,78 @@ public class HashSetCollections {
         }
         System.out.println("Updated list:");
         for (String x : cutAndPastString) System.out.println(x);
+    }
+
+    /* 5.2.12 Создать множество строк (Set<String>), занести в него 20 слов на букву «Л».*/
+    public static void fillUpSetOfWordsFromL() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.12:");
+        Set<String> setOfWordsFromL = new HashSet<String>();
+        for (int i = 0; i < 20; i++) {
+            setOfWordsFromL.add("Л" + i);
+        }
+        System.out.println("20 words from Л: ");
+        for (String x : setOfWordsFromL) {
+            System.out.println(x);
+        }
+    }
+
+    /* 5.2.13 Создать множество чисел(Set<Integer>), занести туда 20 различных чисел.
+    Удалить из множества все числа больше 10 */
+    public static void filterSetOfRandomNumbers() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.13:");
+        Set<Integer> setOfRandomNumbers = new HashSet<Integer>();
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            setOfRandomNumbers.add(random.nextInt(31));
+        }
+        setOfRandomNumbers.removeIf(integer -> integer > 10); // Java8 proposed this code instead of using Iterator and generated it of itself after my consent
+
+        /* Iterator<Integer> iterator = setOfRandomNumbers.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next() > 10) iterator.remove();
+        } */
+
+        System.out.println("Set of random numbers less than 11:");
+        System.out.println(setOfRandomNumbers.toString());
+    }
+
+    /* 5.2.14 Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя».
+    Проверить сколько людей имеют совпадающие с заданным имя или фамилию.*/
+    public static void checkMapOfNamesAndSurnames() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.14:");
+        Map<String, String> mapOfNamesAndSurnames = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter 20 Names and Lastnames in format: 'Name Lastname'");
+        for (int i = 0; i < 20; i++) {
+            mapOfNamesAndSurnames.put(scanner.next(), scanner.nextLine());
+        }
+
+        System.out.println("Entire map: ");
+        System.out.println(mapOfNamesAndSurnames.toString());
+
+        System.out.println("Matches: ");
+        Map<String, String> mapOfMatches = new HashMap<>();
+        for (Map.Entry<String, String> pair : mapOfNamesAndSurnames.entrySet()) {
+            if (pair.getKey().equals("Inna") | pair.getValue().equals(" Bagmut")) {
+                //System.out.println(pair.getKey());
+                mapOfMatches.put(pair.getKey(), pair.getValue());
+            }
+        }
+        System.out.println("Output of filtered map:");
+        System.out.println(mapOfMatches.toString());
+        System.out.println("Number of people with the same name or lastname: " + mapOfMatches.size());
+
+        System.out.println("Option 2:");
+        int counter = 0;
+        for (Map.Entry<String, String> pair : mapOfNamesAndSurnames.entrySet()) {
+            if (pair.getKey().equals("Inna") | pair.getValue().equals(" Bagmut")) {
+                counter++;
+            }
+        }
+        System.out.println("Number of people with the same name or lastname: " + counter);
     }
 }
