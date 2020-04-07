@@ -93,6 +93,10 @@ public class Main {
 
         /* 5.2.14 Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя».
         Проверить сколько людей имеют совпадающие с заданным имя или фамилию.*/
-        HashSetCollections.checkMapOfNamesAndSurnames();
+        //HashSetCollections.checkMapOfNamesAndSurnames();
+
+        /* 5.2.15 Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу:
+        «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом */
+        HashSetCollections.deleteSummerDatesFromMap();
     }
 }

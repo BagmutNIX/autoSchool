@@ -1,5 +1,7 @@
 package com.unit05.lesson02;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.*;
 
 public class HashSetCollections {
@@ -446,12 +448,27 @@ public class HashSetCollections {
         System.out.println("Number of people with the same name or lastname: " + mapOfMatches.size());
 
         System.out.println("Option 2:");
-        int counter = 0;
+        int quantity = 0;
         for (Map.Entry<String, String> pair : mapOfNamesAndSurnames.entrySet()) {
             if (pair.getKey().equals("Inna") | pair.getValue().equals(" Bagmut")) {
-                counter++;
+                quantity++;
             }
         }
-        System.out.println("Number of people with the same name or lastname: " + counter);
+        System.out.println("Number of people with the same name or lastname: " + quantity);
+    }
+
+    /* 5.2.15 Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу:
+    «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом.*/
+    public static void deleteSummerDatesFromMap() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.15:");
+        Map<String, LocalDate> mapOfLastnamesAndBirthdays = new HashMap<>();
+        mapOfLastnamesAndBirthdays.put("Helen", LocalDate.of(2000, 12, 12));
+        mapOfLastnamesAndBirthdays.put("Andrea", LocalDate.of(1975, 6, 30));
+        System.out.println(mapOfLastnamesAndBirthdays.toString());
+
+        for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
+            //if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9) mapOfLastnamesAndBirthdays.remove()
+        }
     }
 }
