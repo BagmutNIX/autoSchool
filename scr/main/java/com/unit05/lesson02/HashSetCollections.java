@@ -462,13 +462,23 @@ public class HashSetCollections {
     public static void deleteSummerDatesFromMap() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.15:");
+        Random random = new Random();
         Map<String, LocalDate> mapOfLastnamesAndBirthdays = new HashMap<>();
         mapOfLastnamesAndBirthdays.put("Helen", LocalDate.of(2000, 12, 12));
         mapOfLastnamesAndBirthdays.put("Andrea", LocalDate.of(1975, 6, 30));
+        for (int i = 0; i < 10; i++) {
+            mapOfLastnamesAndBirthdays.put("LastName" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(11), 1 + random.nextInt(27)));
+        }
+        while (mapOfLastnamesAndBirthdays.size() < 10) {
+            mapOfLastnamesAndBirthdays.put("Name" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(11), 1 + random.nextInt(27)));
+        }
         System.out.println(mapOfLastnamesAndBirthdays.toString());
 
+        System.out.println("Map output except entries with summer months:");
         for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
-            //if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9) mapOfLastnamesAndBirthdays.remove()
+            if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9)
+                mapOfLastnamesAndBirthdays.remove(pair.getKey());
+            else System.out.println(pair.getKey() + " - " + pair.getValue());
         }
     }
 }
