@@ -504,12 +504,27 @@ public class HashSetCollections {
         System.out.println("Map with deleted entries that saved similar lastnames:");
         for (Map.Entry<String, String> pair1 : mapNamesLastnames.entrySet()) {
             for (Map.Entry<String, String> pair2 : mapNamesLastnames.entrySet()) {
-            if (pair2.getValue().equals(pair1.getValue())) mapNamesLastnames.remove(pair1);
+            if (!(pair1.getKey().equals(pair2.getKey())) && pair1.getValue().equals(pair2.getValue())) mapNamesLastnames.remove(pair1);
             }
             System.out.println(pair1.getKey() + " - " + pair1.getValue());
         }
+
+        System.out.println("One element:");
+        System.out.println(mapNamesLastnames.get(mapNamesLastnames.get(0)));
+
+
+        System.out.println("Option 2:");
         for (int i = 0; i < mapNamesLastnames.size(); i++) {
-            //if (mapNamesLastnames.get(i))
+            if (mapNamesLastnames.equals(mapNamesLastnames.get(i+1))) mapNamesLastnames.remove(mapNamesLastnames.entrySet());
         }
+        System.out.println("Map with deleted entries that saved similar lastnames:");
+        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
     }
+
+    /* 5.2.17
+    1. Создать словарь Map (<String, String>) и добавить туда 10 человек в виде «Фамилия»-«Имя».
+    2. Пусть среди этих 10 человек есть люди с одинаковыми именами.
+    3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
+    4. Вывести содержимое Map на экран. */
 }
