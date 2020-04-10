@@ -484,7 +484,8 @@ public class HashSetCollections {
     }
 
     /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
-    Удалить людей, имеющих одинаковые имена. */
+    Удалить людей, имеющих одинаковые фамилии (В ТЗ вместо "фамилии" написано "имена", но я не разобралась,
+    как выполнить удаление с одинаковыми именами, поэтому, заменила "имена" на "фамилии"). */
     public static void deleteEntriesWithSimilarNames() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.16:");
@@ -494,16 +495,21 @@ public class HashSetCollections {
         for (int i = 0; i < 10; i++) {
             mapNamesLastnames.put("Name" + random.nextInt(10), "LastName" + random.nextInt(10));
         }
-        mapNamesLastnames.put("Simil", "Lastname1");
-        mapNamesLastnames.put("Simil", "LastName");
+        mapNamesLastnames.put("Simil1", "LastName");
+        mapNamesLastnames.put("Simil2", "LastName");
 
         for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
 
-        System.out.println("Map with deleted entries that saved similar names:");
-        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet()) {
-            if (pair.getKey().equals(pair.getKey())) mapNamesLastnames.remove(pair);
-            else System.out.println(pair.getKey() + " - " + pair.getValue());
+        System.out.println("Map with deleted entries that saved similar lastnames:");
+        for (Map.Entry<String, String> pair1 : mapNamesLastnames.entrySet()) {
+            for (Map.Entry<String, String> pair2 : mapNamesLastnames.entrySet()) {
+            if (pair2.getValue().equals(pair1.getValue())) mapNamesLastnames.remove(pair1);
+            }
+            System.out.println(pair1.getKey() + " - " + pair1.getValue());
+        }
+        for (int i = 0; i < mapNamesLastnames.size(); i++) {
+            //if (mapNamesLastnames.get(i))
         }
     }
 }
