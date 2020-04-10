@@ -97,6 +97,10 @@ public class Main {
 
         /* 5.2.15 Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу:
         «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом */
-        HashSetCollections.deleteSummerDatesFromMap();
+        //HashSetCollections.deleteSummerDatesFromMap();
+
+        /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
+        Удалить людей, имеющих одинаковые имена. */
+        HashSetCollections.deleteEntriesWithSimilarNames();
     }
 }

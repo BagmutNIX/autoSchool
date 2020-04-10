@@ -466,18 +466,43 @@ public class HashSetCollections {
         Map<String, LocalDate> mapOfLastnamesAndBirthdays = new HashMap<>();
         mapOfLastnamesAndBirthdays.put("Helen", LocalDate.of(2000, 12, 12));
         mapOfLastnamesAndBirthdays.put("Andrea", LocalDate.of(1975, 6, 30));
-        for (int i = 0; i < 10; i++) {
+/*        for (int i = 0; i < 10; i++) {
             mapOfLastnamesAndBirthdays.put("LastName" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(11), 1 + random.nextInt(27)));
-        }
+        }*/
         while (mapOfLastnamesAndBirthdays.size() < 10) {
-            mapOfLastnamesAndBirthdays.put("Name" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(11), 1 + random.nextInt(27)));
+            mapOfLastnamesAndBirthdays.put("LastName" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(12), 1 + random.nextInt(28)));
         }
         System.out.println(mapOfLastnamesAndBirthdays.toString());
 
+        System.out.println("");
         System.out.println("Map output except entries with summer months:");
         for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
             if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9)
-                mapOfLastnamesAndBirthdays.remove(pair.getKey());
+                mapOfLastnamesAndBirthdays.remove(pair);
+            else System.out.println(pair.getKey() + " - " + pair.getValue());
+        }
+    }
+
+    /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
+    Удалить людей, имеющих одинаковые имена. */
+    public static void deleteEntriesWithSimilarNames() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.16:");
+        Map<String, String> mapNamesLastnames = new HashMap<>();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            mapNamesLastnames.put("Name" + random.nextInt(10), "LastName" + random.nextInt(10));
+        }
+        mapNamesLastnames.put("Simil", "Lastname1");
+        mapNamesLastnames.put("Simil", "LastName");
+
+        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+
+        System.out.println("Map with deleted entries that saved similar names:");
+        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet()) {
+            if (pair.getKey().equals(pair.getKey())) mapNamesLastnames.remove(pair);
             else System.out.println(pair.getKey() + " - " + pair.getValue());
         }
     }
