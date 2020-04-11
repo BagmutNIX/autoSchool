@@ -1,8 +1,6 @@
 package com.unit05.lesson02;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -100,15 +98,18 @@ public class Main {
         //HashSetCollections.deleteSummerDatesFromMap();
 
         /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
-        Удалить людей, имеющих одинаковые фамилии (В ТЗ вместо "фамилии" написано "имена", но я не разобралась,
-        как выполнить удаление с одинаковыми именами, поэтому, заменила "имена" на "фамилии"). */
-        HashSetCollections.deleteEntriesWithSimilarNames();
+        Удалить людей, имеющих одинаковые имена. */
+        //HashSetCollections.deleteEntriesWithSimilarNames();
+        //HashSetCollections.createMapOption2();
+        //Map<String, String> myMap = HashSetCollections.createMapOption2();
+        //HashSetCollections.removeEntriesWithSimilarNames(myMap);
+        //HashSetCollections.countDuplicates(myMap); //This is just self education, not for reviewing
 
         /* 5.2.17
         1. Создать словарь Map (<String, String>) и добавить туда 10 человек в виде «Фамилия»-«Имя».
         2. Пусть среди этих 10 человек есть люди с одинаковыми именами.
         3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
         4. Вывести содержимое Map на экран. */
-
+        HashSetCollections.createmapWithSimilarLastnamesAndNames();
     }
 }

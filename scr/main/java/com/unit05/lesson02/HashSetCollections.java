@@ -1,8 +1,8 @@
 package com.unit05.lesson02;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.*;
+
 
 public class HashSetCollections {
 
@@ -484,42 +484,91 @@ public class HashSetCollections {
     }
 
     /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
-    Удалить людей, имеющих одинаковые фамилии (В ТЗ вместо "фамилии" написано "имена", но я не разобралась,
-    как выполнить удаление с одинаковыми именами, поэтому, заменила "имена" на "фамилии"). */
+    Удалить людей, имеющих одинаковые имена */
     public static void deleteEntriesWithSimilarNames() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.16:");
-        Map<String, String> mapNamesLastnames = new HashMap<>();
+        Map<String, String> mapLastnamesNames = new HashMap<>();
         Random random = new Random();
 
         for (int i = 0; i < 10; i++) {
-            mapNamesLastnames.put("Name" + random.nextInt(10), "LastName" + random.nextInt(10));
+            mapLastnamesNames.put("LastName" + random.nextInt(10), "Name" + random.nextInt(10));
         }
-        mapNamesLastnames.put("Simil1", "LastName");
-        mapNamesLastnames.put("Simil2", "LastName");
+        mapLastnamesNames.put("LastNameA", "Sim");
+        mapLastnamesNames.put("LastNameB", "Sim");
 
-        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet())
+        for (Map.Entry<String, String> pair : mapLastnamesNames.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
 
         System.out.println("Map with deleted entries that saved similar lastnames:");
-        for (Map.Entry<String, String> pair1 : mapNamesLastnames.entrySet()) {
-            for (Map.Entry<String, String> pair2 : mapNamesLastnames.entrySet()) {
-            if (!(pair1.getKey().equals(pair2.getKey())) && pair1.getValue().equals(pair2.getValue())) mapNamesLastnames.remove(pair1);
-            }
+        for (Map.Entry<String, String> pair1 : mapLastnamesNames.entrySet()) {
+            for (Map.Entry<String, String> pair2 : mapLastnamesNames.entrySet()) {
+                if (!(pair1.getKey().equals(pair2.getKey())) && pair1.getValue().equals(pair2.getValue()))
+                    mapLastnamesNames.remove(pair1);
+            } // I wanted to resolve it without creating another map or set, but didn't figure out how...
+            // and i want to get, why my solution doesn't work
             System.out.println(pair1.getKey() + " - " + pair1.getValue());
         }
 
-        System.out.println("One element:");
-        System.out.println(mapNamesLastnames.get(mapNamesLastnames.get(0)));
-
-
-        System.out.println("Option 2:");
-        for (int i = 0; i < mapNamesLastnames.size(); i++) {
-            if (mapNamesLastnames.equals(mapNamesLastnames.get(i+1))) mapNamesLastnames.remove(mapNamesLastnames.entrySet());
-        }
-        System.out.println("Map with deleted entries that saved similar lastnames:");
-        for (Map.Entry<String, String> pair : mapNamesLastnames.entrySet())
+        System.out.println("Separate output:");
+        for (Map.Entry<String, String> pair : mapLastnamesNames.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
+    }
+
+    public static Map<String, String> createMapOption2() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.16 Option2:");
+        Map<String, String> mapLastnamesNames = new HashMap<>();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            mapLastnamesNames.put("LastName" + random.nextInt(10), "Name" + random.nextInt(10));
+        }
+        mapLastnamesNames.put("LastNameA", "Sim");
+        mapLastnamesNames.put("LastNameB", "Sim");
+        //String originalValue = mapLastnamesNames.get
+
+        System.out.println("Filled map:");
+        for (Map.Entry<String, String> pair : mapLastnamesNames.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+        return mapLastnamesNames;
+    }
+
+    public static void removeEntriesWithSimilarNames(Map<String, String> map) {
+        List<String> counter = new ArrayList<>(map.values());
+        for (String a : counter) {
+            int count = 0;
+            for (int i = 0; i < counter.size(); i++) {
+                if (a.equals(counter.get(i))) count++;
+            }
+            if (count > 1) removeEntry(map, a);
+        }
+        System.out.println("");
+        System.out.println("Result:");
+        for (Map.Entry<String, String> pair : map.entrySet())
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+    }
+
+    public static void removeEntry(Map<String, String> map, String value) {
+        Map<String, String> copy = new HashMap<>(map);
+        for (Map.Entry<String, String> pair : copy.entrySet()) {
+            if (pair.getValue().equals(value))
+                map.remove(pair.getKey());
+        }
+    }
+
+    //This is just self education, not for reviewing:
+    public static void countDuplicates(Map<String, String> map) {
+        Map<String, Integer> mapNameCount = new HashMap<>();
+        int count = 0;
+        for (Map.Entry<String, String> pair1 : map.entrySet()) {
+            for (Map.Entry<String, String> pair2 : map.entrySet()) {
+                if (!pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue())) count++;
+            }
+            mapNameCount.put(pair1.getValue(), count);
+        }
+
+        System.out.println(mapNameCount);
     }
 
     /* 5.2.17
@@ -527,4 +576,22 @@ public class HashSetCollections {
     2. Пусть среди этих 10 человек есть люди с одинаковыми именами.
     3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
     4. Вывести содержимое Map на экран. */
+
+    public static void createmapWithSimilarLastnamesAndNames() {
+        System.out.println("================================================================================");
+        System.out.println("Task 5.2.17:");
+        Map<String, String> mapWithSimilarLastnamesAndNames = new HashMap<>();
+        Random random = new Random();
+        mapWithSimilarLastnamesAndNames.put("Chillie", "Cler");
+        mapWithSimilarLastnamesAndNames.put("Rainy", "Diana");
+        mapWithSimilarLastnamesAndNames.put("Chillie", "Bim");
+        while (mapWithSimilarLastnamesAndNames.size() < 10) {
+            mapWithSimilarLastnamesAndNames.put("Lastname" + random.nextInt(8), "Name" + random.nextInt(3));
+        }
+
+        for (Map.Entry<String, String> pair : mapWithSimilarLastnamesAndNames.entrySet()) {
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+        }
+        System.out.println("Entry with repeated key replaces the first one");
+    }
 }
