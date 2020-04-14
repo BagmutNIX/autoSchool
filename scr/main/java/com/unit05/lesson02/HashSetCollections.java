@@ -557,15 +557,48 @@ public class HashSetCollections {
         }
     }
 
-    //This is just self education, not for reviewing:
+    // This is just self education, not for reviewing:
+    // Создать словарик mapNameCount, затнести в него key - скопированное value из map,
+    // value - количество повторяющихся имён
     public static void countDuplicates(Map<String, String> map) {
         Map<String, Integer> mapNameCount = new HashMap<>();
         int count = 0;
-        for (Map.Entry<String, String> pair1 : map.entrySet()) {
+
+        System.out.println("Option 1:");
+/*        for (Map.Entry<String, String> pair1 : map.entrySet()) {
             for (Map.Entry<String, String> pair2 : map.entrySet()) {
                 if (!pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue())) count++;
             }
             mapNameCount.put(pair1.getValue(), count);
+        }*/
+/*        for (Map.Entry<String, String> pair : map.entrySet()) {
+            mapNameCount.put(pair.getValue(), count);
+        }
+        for (Map.Entry<String, String> pair : map.entrySet()) {
+            if (mapNameCount.containsKey(pair.getValue())) count++;
+            mapNameCount.put(pair.getValue(), count);
+        }
+        System.out.println(mapNameCount);*/
+
+        /*
+        System.out.println("Option 2:");
+        List<String> names = new ArrayList<>(map.values());
+        for (String a : names) {
+            for (int i = 0; i < names.size(); i++) {
+                if (a.equals(names.get(i))) count++;
+            }
+            mapNameCount.put(a, count);
+        }*/
+
+        //Option3
+        for (Map.Entry<String, String> pair1 : map.entrySet()) {
+            String name = pair1.getValue();
+            if (mapNameCount.containsKey(name)) {
+                mapNameCount.replace(name, mapNameCount.get(name)+1);
+            }
+            else {
+                mapNameCount.put(name, 1);
+            }
         }
 
         System.out.println(mapNameCount);

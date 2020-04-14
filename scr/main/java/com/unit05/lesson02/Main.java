@@ -101,15 +101,15 @@ public class Main {
         Удалить людей, имеющих одинаковые имена. */
         //HashSetCollections.deleteEntriesWithSimilarNames();
         //HashSetCollections.createMapOption2();
-        //Map<String, String> myMap = HashSetCollections.createMapOption2();
+        Map<String, String> myMap = HashSetCollections.createMapOption2();
         //HashSetCollections.removeEntriesWithSimilarNames(myMap);
-        //HashSetCollections.countDuplicates(myMap); //This is just self education, not for reviewing
+        HashSetCollections.countDuplicates(myMap); //This is just self education, not for reviewing
 
         /* 5.2.17
         1. Создать словарь Map (<String, String>) и добавить туда 10 человек в виде «Фамилия»-«Имя».
         2. Пусть среди этих 10 человек есть люди с одинаковыми именами.
         3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
         4. Вывести содержимое Map на экран. */
-        HashSetCollections.createmapWithSimilarLastnamesAndNames();
+        //HashSetCollections.createmapWithSimilarLastnamesAndNames();
     }
 }
