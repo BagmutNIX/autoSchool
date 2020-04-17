@@ -1,4 +1,4 @@
-package com.unit05.lesson02;
+package selfeducation.unit05.lesson02;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -91,43 +91,6 @@ public class HashSetCollections {
     Создать коллекцию HashMap<String, Cat>.
     Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
     Вывести результат на экран, каждый элемент с новой строки.*/
-
-    public static void catsMapRandomFill() {
-        System.out.println("================================================================================");
-        System.out.println("Task 5.2.3:");
-        CatRandom myobj1;
-        Map<CatRandom, Random> cats = new HashMap<>();
-        //cats.put("Siamsky", myobj1);
-
-/*        System.out.println("");
-        System.out.println("Output through cycle while:");
-        Iterator<Map.Entry<Random, Cat>> iterator = cats.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<Random, Cat> pair = iterator.next();
-            Random key = pair.getKey();
-            Cat value = pair.getValue();
-            System.out.println(key + " - " + value);
-        }
-
-        System.out.println("");
-        System.out.println("Cats output:");
-        for (Map.Entry<Random, Cat> pair : cats.entrySet())
-            System.out.println(pair.getKey() + " - " + pair.getValue().toString());*/
-
-        for (int i = 0; i < 10; i++) {
-            Random random = new Random();
-            myobj1 = new CatRandom(random);
-            cats.put(myobj1, random);
-        }
-
-        System.out.println("Cats output:");
-        for (Map.Entry<CatRandom, Random> pair : cats.entrySet())
-            System.out.println(pair.getKey() + " - " + pair.getValue());
-
-        System.out.println(Collections.singletonList(cats.toString()));
-
-        System.out.println(cats.toString());
-    }
 
     public static void catsMapManualFill() {
         System.out.println("================================================================================");
