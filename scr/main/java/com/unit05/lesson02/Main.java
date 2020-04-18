@@ -1,7 +1,5 @@
 package com.unit05.lesson02;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -28,7 +26,7 @@ public class Main {
 //        Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
 //        Вывести результат на экран, каждый элемент с новой строки.*/
 //        HashSetCollections.catsMapRandomFill();
- HashSetCollections.catsMapManualFill();
+// HashSetCollections.catsMapManualFill();
 //
 //        /* 5.2.4 Вывести на экран список ключей
 //        Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
@@ -101,10 +99,14 @@ public class Main {
 
         /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
         Удалить людей, имеющих одинаковые имена. */
-       // HashSetCollections.deleteEntriesWithSimilarNames();
-//        Map<String, String> myMap = HashSetCollections.createMapOption2();
-//        HashSetCollections.removeEntriesWithSimilarNames(myMap);
-        //HashSetCollections.countDuplicates(myMap); //This is just self education, not for reviewing
+//        Map<String, String> myMap1 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption1(myMap1);
+//        Map<String, String> myMap2 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption2(myMap2);
+//        Map<String, String> myMap3 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption3(myMap3);
+        Map<String, String> myMap4 = HashSetCollections.createMap();
+        HashSetCollections.removeEntriesWithSimilarNamesOption4(myMap4); //This is just self education, not for reviewing
 
         /* 5.2.17
         1. Создать словарь Map (<String, String>) и добавить туда 10 человек в виде «Фамилия»-«Имя».
