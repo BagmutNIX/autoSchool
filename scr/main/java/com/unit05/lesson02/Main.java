@@ -20,13 +20,12 @@ public class Main {
 //        картофель – клубень*/
 //        HashSetCollections.fruitsCategories();
 //
-//        /* 5.2.3 Коллекция HashMap из котов
-//        Есть класс Cat, с полем имя (name, String).
-//        Создать коллекцию HashMap<String, Cat>.
-//        Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
-//        Вывести результат на экран, каждый элемент с новой строки.*/
-//        HashSetCollections.catsMapRandomFill();
-// HashSetCollections.catsMapManualFill();
+        /* 5.2.3 Коллекция HashMap из котов
+        Есть класс Cat, с полем имя (name, String).
+        Создать коллекцию HashMap<String, Cat>.
+        Добавить в коллекцию 10 котов, в качестве ключа использовать имя кота.
+        Вывести результат на экран, каждый элемент с новой строки.*/
+        HashSetCollections.catsMapManualFill();
 //
 //        /* 5.2.4 Вывести на экран список ключей
 //        Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
@@ -95,16 +94,16 @@ public class Main {
 
         /* 5.2.15 Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу:
         «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом */
-        //HashSetCollections.deleteSummerDatesFromMap();
+        HashSetCollections.deleteSummerDatesFromMap();
 
         /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
         Удалить людей, имеющих одинаковые имена. */
-//        Map<String, String> myMap1 = HashSetCollections.createMap();
-//        HashSetCollections.removeEntriesWithSimilarNamesOption1(myMap1);
-//        Map<String, String> myMap2 = HashSetCollections.createMap();
-//        HashSetCollections.removeEntriesWithSimilarNamesOption2(myMap2);
-//        Map<String, String> myMap3 = HashSetCollections.createMap();
-//        HashSetCollections.removeEntriesWithSimilarNamesOption3(myMap3);
+        Map<String, String> myMap1 = HashSetCollections.createMap();
+        HashSetCollections.removeEntriesWithSimilarNamesOption1(myMap1);
+        Map<String, String> myMap2 = HashSetCollections.createMap();
+        HashSetCollections.removeEntriesWithSimilarNamesOption2(myMap2);
+        Map<String, String> myMap3 = HashSetCollections.createMap();
+        HashSetCollections.removeEntriesWithSimilarNamesOption3(myMap3);
         Map<String, String> myMap4 = HashSetCollections.createMap();
         HashSetCollections.removeEntriesWithSimilarNamesOption4(myMap4); //This is just self education, not for reviewing
 
@@ -113,6 +112,6 @@ public class Main {
         2. Пусть среди этих 10 человек есть люди с одинаковыми именами.
         3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
         4. Вывести содержимое Map на экран. */
-        //HashSetCollections.createmapWithSimilarLastnamesAndNames();
+        //HashSetCollections.createMapWithSimilarLastnamesAndNames();
     }
 }

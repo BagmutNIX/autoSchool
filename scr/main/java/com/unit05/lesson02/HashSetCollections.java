@@ -105,7 +105,7 @@ public class HashSetCollections {
         System.out.println("Cats output:");
         for (Map.Entry<String, Cat> pair : cats.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
-    }
+    } //TODO Cats Random Fill after moving ro maven project with library org.apache.commons.lang3.RandomStringUtils
 
     /* 5.2.4 Вывести на экран список ключей
     Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
@@ -401,16 +401,33 @@ public class HashSetCollections {
         while (mapOfLastnamesAndBirthdays.size() < 10) {
             mapOfLastnamesAndBirthdays.put("LastName" + random.nextInt(10), LocalDate.of(1900 + random.nextInt(110), 1 + random.nextInt(12), 1 + random.nextInt(28)));
         }
-        System.out.println(mapOfLastnamesAndBirthdays.toString());
 
+        System.out.println("Whole map:");
+        for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+        }
+
+        List<String> summer = new ArrayList<>();
+
+        for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
+            if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9)
+                summer.add(pair.getKey());
+        }
+
+        System.out.println("Summer people: " + summer);
+
+        for (String key : summer) mapOfLastnamesAndBirthdays.remove(key);
 
         System.out.println("");
         System.out.println("Map output except entries with summer months:");
         for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+        }
+/*        for (Map.Entry<String, LocalDate> pair : mapOfLastnamesAndBirthdays.entrySet()) {
             if (pair.getValue().getMonthValue() > 5 && pair.getValue().getMonthValue() < 9)
                 mapOfLastnamesAndBirthdays.remove(pair);
             else System.out.println(pair.getKey() + " - " + pair.getValue());
-        }
+        }*/ //weird, but this cycle works well
     }
 
     /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
@@ -420,7 +437,6 @@ public class HashSetCollections {
         System.out.println("");
         System.out.println("");
         System.out.println("================================================================================");
-
 
         Map<String, String> mapLastnamesNames = new HashMap<>();
         Random random = new Random();
@@ -531,20 +547,28 @@ public class HashSetCollections {
             }
         }
 
+        mapNameCount.entrySet().removeIf(entry -> entry.getValue() < 2);
+        System.out.println("Name duplicates:");
         System.out.println(mapNameCount);
 
-//        for (Map.Entry<String, Integer> pair : mapNameCount.entrySet()) {
-//            if (pair.getValue() > 1) mapNameCount.remove(pair.getKey());
-//        }
-//
-//        for (Map.Entry<String, Integer> pair : mapNameCount.entrySet())
-//            map.remove(pair.getKey());
+        for (Map.Entry<String, Integer> pair1 : mapNameCount.entrySet()) {
+            String name = pair1.getKey();
+            map.entrySet().removeIf(entry -> entry.getValue().equals(name));
+        }
 
-        //List<String> name = new ArrayList<>(mapNameCount.keySet());
+        /*
+        for (Map.Entry<String, Integer> pair : mapNameCount.entrySet()) {
+            if (pair.getValue() > 1) mapNameCount.remove(pair.getKey());
+        }
+
+        for (Map.Entry<String, Integer> pair : mapNameCount.entrySet())
+            map.remove(pair.getKey());
+
+        List<String> name = new ArrayList<>(mapNameCount.keySet());
         //System.out.println(name);
 
         //for (String value : name) map.remove(value);
-
+        */
 
 
         System.out.println("Map without duplicates:");
@@ -558,7 +582,7 @@ public class HashSetCollections {
     3. Пусть среди этих 10 человек есть люди с одинаковыми фамилиями. Обратить внимание на количество записей в получившейся коллекции.
     4. Вывести содержимое Map на экран. */
 
-    public static void createmapWithSimilarLastnamesAndNames() {
+    public static void createMapWithSimilarLastnamesAndNames() {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.17:");
         Map<String, String> mapWithSimilarLastnamesAndNames = new HashMap<>();
