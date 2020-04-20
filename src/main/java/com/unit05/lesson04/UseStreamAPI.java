@@ -59,7 +59,6 @@ public class UseStreamAPI {
         Random random = new Random();
 
         String generatedString = random.ints(leftLimit, rightLimit + 1)
-                //.min()
                 .limit(random.nextInt(20))
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
