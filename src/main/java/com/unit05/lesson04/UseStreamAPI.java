@@ -41,9 +41,8 @@ public class UseStreamAPI {
 
         System.out.println("===========================================");
         System.out.println("Words that are not empty and not contain 'd' letter:");
-        randomString.stream().filter((s) -> {
-            return !s.isEmpty() && !s.contains("d");
-        }).forEach(System.out::println);
+        randomString.stream().filter((string) -> !string.isEmpty() && !string.contains("d"))
+                .forEach(System.out::println);
 
         System.out.println("===========================================");
         System.out.println("Sorted list:");

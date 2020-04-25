@@ -13,7 +13,5 @@ public class Cat {
     }
 
     @Override
-    public String toString() {
-        return name;
-    }
+    public String toString() { return name; }
 }

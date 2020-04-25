@@ -94,18 +94,18 @@ public class Main {
 
         /* 5.2.15 Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу:
         «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом */
-        HashSetCollections.deleteSummerDatesFromMap();
+        //HashSetCollections.deleteSummerDatesFromMap();
 
         /* 5.2.16 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
         Удалить людей, имеющих одинаковые имена. */
-        Map<String, String> myMap1 = HashSetCollections.createMap();
-        HashSetCollections.removeEntriesWithSimilarNamesOption1(myMap1);
+//        Map<String, String> myMap1 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption1(myMap1);
         Map<String, String> myMap2 = HashSetCollections.createMap();
         HashSetCollections.removeEntriesWithSimilarNamesOption2(myMap2);
-        Map<String, String> myMap3 = HashSetCollections.createMap();
-        HashSetCollections.removeEntriesWithSimilarNamesOption3(myMap3);
-        Map<String, String> myMap4 = HashSetCollections.createMap();
-        HashSetCollections.removeEntriesWithSimilarNamesOption4(myMap4); //This is just self education, not for reviewing
+//        Map<String, String> myMap3 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption3(myMap3);
+//        Map<String, String> myMap4 = HashSetCollections.createMap();
+//        HashSetCollections.removeEntriesWithSimilarNamesOption4(myMap4); //This is just self education, not for reviewing
 
         /* 5.2.17
         1. Создать словарь Map (<String, String>) и добавить туда 10 человек в виде «Фамилия»-«Имя».

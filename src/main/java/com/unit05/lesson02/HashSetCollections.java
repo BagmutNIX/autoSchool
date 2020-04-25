@@ -96,16 +96,16 @@ public class HashSetCollections {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.3:");
         Map<String, Cat> cats = new HashMap<>();
-        Random random = new Random();
-        Cat myObj = new Cat("Timka");
         for (int i = 0; i < 10; i++) {
-            cats.put(myObj.getName() + random.nextInt(100), new Cat("Barsic" + random.nextInt(10)));
+            String name = "Timka" + i;
+            //String name = "Timka" + ((Integer) i).toString();
+            cats.put(name, new Cat(name));
         }
 
         System.out.println("Cats output:");
         for (Map.Entry<String, Cat> pair : cats.entrySet())
             System.out.println(pair.getKey() + " - " + pair.getValue());
-    } //TODO Cats Random Fill after moving ro maven project with library org.apache.commons.lang3.RandomStringUtils
+    } //TODO Cats Random Fill after moving to maven project with library org.apache.commons.lang3.RandomStringUtils
 
     /* 5.2.4 Вывести на экран список ключей
     Есть коллекция HashMap<String, String>, туда занесли 10 различных строк.
@@ -446,6 +446,7 @@ public class HashSetCollections {
 //                           //        }
         mapLastnamesNames.put("LastNameA", "Sim");
         mapLastnamesNames.put("LastNameB", "Sim");
+        mapLastnamesNames.put("LastNameC", "Sim");
         while (mapLastnamesNames.size() < 10) {
             mapLastnamesNames.put("LastName" + random.nextInt(10), "Name" + random.nextInt(7));
         }
@@ -485,20 +486,28 @@ public class HashSetCollections {
         System.out.println("================================================================================");
         System.out.println("Task 5.2.16 Option2 - renamed duple values and deleted all renamed:");
         for (Map.Entry<String, String> pair1 : map.entrySet()) {
+            boolean replace = false;
             for (Map.Entry<String, String> pair2 : map.entrySet()) {
-                if (!pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue()))
-                    map.replace(pair1.getKey(), pair1.getValue(), "Delete");
-                //map.replace(pair2.getKey(), pair2.getValue(), "Delete");
+                if (!pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue())) {
+                    map.replace(pair2.getKey(), pair2.getValue(), "Delete");
+                    replace = true;
+                }
             }
+            if (replace)
+                map.replace(pair1.getKey(), pair1.getValue(), "Delete");
         }
 
         for (Map.Entry<String, String> pair : map.entrySet()) {
             System.out.println(pair.getKey() + " - " + pair.getValue());
         }
 
-/*        for (Map.Entry<String, String> pair3 : map.entrySet()) {
-            if (pair3.getValue().matches("Delete")) map.remove(pair3.getKey());
-        }*/
+
+        for (String key: new ArrayList<String>(map.keySet())) {
+            if (map.get(key).equals("Delete"))
+                map.remove(key);
+        }
+
+        //map.entrySet().removeIf(pair -> pair.getValue().matches("Delete"));
 
         System.out.println("Map without duplicates:");
         for (Map.Entry<String, String> pair : map.entrySet()) {
