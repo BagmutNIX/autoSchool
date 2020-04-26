@@ -97,11 +97,11 @@ public class Arrays {
         System.out.println("Task 2.5.3:");
         Reader r = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(r);
-        java.lang.String[] words = new java.lang.String[10];
+        String[] words = new String[10];
         int numbers[] = new int[10];
         System.out.println("Enter strings: ");
         for (int i = 0; i < words.length; i++) {
-            java.lang.String s = reader.readLine();
+            String s = reader.readLine();
             words[i] = s;
             numbers[i] = words[i].length();
             System.out.println(numbers[i]);

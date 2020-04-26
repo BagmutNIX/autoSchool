@@ -448,7 +448,7 @@ public class HashSetCollections {
         mapLastnamesNames.put("LastNameB", "Sim");
         mapLastnamesNames.put("LastNameC", "Sim");
         while (mapLastnamesNames.size() < 10) {
-            mapLastnamesNames.put("LastName" + random.nextInt(10), "Name" + random.nextInt(7));
+            mapLastnamesNames.put("LastName" + random.nextInt(7), "Name" + random.nextInt(7));
         }
 
         System.out.println("New map with duplicates: ");
